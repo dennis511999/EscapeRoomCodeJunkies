@@ -1,0 +1,10 @@
+"Intro: \n" +
+            "It’s the year 1888. \n" +
+            "It's 2:00 am when you left the pub.\n" +
+            "You walk through a dark alley when suddenly you got hit from behind on your head.\n" +
+            "You slowly regained conciousness.\n" +
+            "Where am I? \n" +
+            "Old man: you have been captured by me. \n" +
+            "Find your way out of my sewers, if you can that is. \n" +
+            "I will give you a hint. \n"
+            "Start by finding the key to open your cell door. \n";
