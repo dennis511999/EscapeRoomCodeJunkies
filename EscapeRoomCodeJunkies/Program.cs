@@ -41,8 +41,7 @@ namespace EscapeRoomCodeJunkies
             for (int i = 0; i < strText.Length; i++)
             {
                 Console.Write(strText[i]);
-                Thread.Sleep(0
-                    );
+                Thread.Sleep(0);
             }
 
             Console.ReadLine();
