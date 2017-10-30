@@ -11,7 +11,7 @@ using System.IO;
 namespace EscapeRoomCodeJunkies
 {
     class Program
-     {
+    {
         public static bool Escape { get; private set; }
 
 
@@ -50,14 +50,51 @@ namespace EscapeRoomCodeJunkies
             string strBasementText = System.IO.File.ReadAllText(@"../../Basement.txt");
             Console.WriteLine(strBasementText);
             Console.ReadLine();
+
+
+
+
+
+
             Console.Clear();
             string strHallText = System.IO.File.ReadAllText(@"../../Hall.txt");
             Console.WriteLine(strHallText);
-            Console.ReadLine();
-
-
-
             
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    {
+                        Program.Dining();
+                        break;
+                    }
+                    
+
+                case "2":
+                    {
+                        Program.Livingroom();
+                        break;
+                    }
+                    
+
+                case "3":
+                    {
+                        Program.Mortuarium();
+                        break;
+                    }
+                    
+
+                case "4":
+                    {
+                        Program.Toilet();
+                        break;
+                    }
+                    
+
+
+            }
+
+
 
 
 
@@ -91,5 +128,39 @@ namespace EscapeRoomCodeJunkies
 
 
         }
+
+        static void Dining()
+        {
+            string strDiningRoomTxt = System.IO.File.ReadAllText(@"../../Diningroom.txt");
+            Console.Write(strDiningRoomTxt);
+            Console.ReadLine();
+        }
+
+        static void Livingroom()
+        {
+            string strLivingRoomTxt = System.IO.File.ReadAllText(@"../../LivingRoom.txt");
+            Console.Write(strLivingRoomTxt);
+            Console.ReadLine();
+        }
+
+        static void Mortuarium()
+        {
+            string strMortuariumTxt = System.IO.File.ReadAllText(@"../../Mortuarium.txt");
+            Console.Write(strMortuariumTxt);
+            Console.ReadLine();
+        }
+
+        static void Toilet()
+        {
+            string strToiletTxt = System.IO.File.ReadAllText(@"../../Toilet.txt");
+            Console.Write(strToiletTxt);
+            Console.ReadLine();
+        }
+        
     }
 }
+        
+
+   
+
+
