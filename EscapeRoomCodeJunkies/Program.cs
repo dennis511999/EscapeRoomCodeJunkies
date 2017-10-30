@@ -92,11 +92,6 @@ namespace EscapeRoomCodeJunkies
 
 
                     
-
-
-
-
-
             }
 
 
@@ -137,13 +132,16 @@ namespace EscapeRoomCodeJunkies
 
         static void Dining()
         {
-            string strDiningRoomTxt = System.IO.File.ReadAllText(@"../../Diningroom.txt");
+            Console.Clear();
+            string strDiningRoomTxt = System.IO.File.ReadAllText(@"../../DiningroomA.txt");
             Console.Write(strDiningRoomTxt);
             Console.ReadLine();
+            
         }
 
         static void Livingroom()
         {
+            Console.Clear();
             string strLivingRoomTxt = System.IO.File.ReadAllText(@"../../LivingRoom.txt");
             Console.Write(strLivingRoomTxt);
             Console.ReadLine();
@@ -151,6 +149,7 @@ namespace EscapeRoomCodeJunkies
 
         static void Mortuarium()
         {
+            Console.Clear();
             string strMortuariumTxt = System.IO.File.ReadAllText(@"../../Mortuarium.txt");
             Console.Write(strMortuariumTxt);
             Console.ReadLine();
@@ -158,6 +157,7 @@ namespace EscapeRoomCodeJunkies
 
         static void Toilet()
         {
+            Console.Clear();
             string strToiletTxt = System.IO.File.ReadAllText(@"../../Toilet.txt");
             Console.Write(strToiletTxt);
             Console.ReadLine();
