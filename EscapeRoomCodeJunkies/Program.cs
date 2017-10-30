@@ -50,6 +50,11 @@ namespace EscapeRoomCodeJunkies
             string strBasementText = System.IO.File.ReadAllText(@"../../Basement.txt");
             Console.WriteLine(strBasementText);
             Console.ReadLine();
+            Console.Clear();
+            string strHallText = System.IO.File.ReadAllText(@"../../Hall.txt");
+            Console.WriteLine(strHallText);
+            Console.ReadLine();
+
 
 
             
