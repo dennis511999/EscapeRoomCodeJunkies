@@ -17,6 +17,8 @@ namespace EscapeRoomCodeJunkies
 
         static void Main(string[] args)
         {
+            string command;
+            
 
             Console.WindowHeight = 20;
             Console.WindowWidth = 128;
@@ -27,7 +29,7 @@ namespace EscapeRoomCodeJunkies
 
             Console.Clear();
 
-            string strText = "Intro: \n" +
+            string strIntroText = "Intro: \n" +
             "It’s the year 1888. \n" +
             "It's 2:00 am when you left the pub.\n" +
             "You walk through a dark alley when suddenly you got hit from behind on your head.\n" +
@@ -36,30 +38,60 @@ namespace EscapeRoomCodeJunkies
             "Old man: you have been captured by me. \n" +
             "Find your way out of my sewers, if you can that is. \n" +
             "I will give you a hint. \n" +
-            "Start by finding the key to open your cell door. \n";
+            "Start by finding the code to open your cell door. \n";
 
-            for (int i = 0; i < strText.Length; i++)
+
+
+            for (int i = 0; i < strIntroText.Length; i++)
             {
-                Console.Write(strText[i]);
+                Console.Write(strIntroText[i]);
                 Thread.Sleep(0);
             }
 
             Console.ReadLine();
 
             Console.Clear();
+
             string strBasementText = System.IO.File.ReadAllText(@"../../Basement.txt");
             Console.WriteLine(strBasementText);
-            Console.ReadLine();
+            Console.SetCursorPosition(2, 17);
 
 
+            string strCellText = "1. Search the cell \n" +
+                                 "2. Try the lock \n";
 
+            for (int i = 0; i < strCellText.Length; i++)
+            {
+                Console.Write(strCellText[i]);
+                Thread.Sleep(0);
+                
+            }
 
+            command = Console.ReadLine();
+
+            if (command == "1")
+            {
+
+            }
+            else
+            {
+                
+                
+                
+            }
+            
+            
+
+            
+            
+
+            
 
 
             Console.Clear();
             string strHallText = System.IO.File.ReadAllText(@"../../Hall.txt");
             Console.WriteLine(strHallText);
-            
+            Console.SetCursorPosition(2, 17);
 
             switch (Console.ReadLine())
             {
@@ -89,20 +121,10 @@ namespace EscapeRoomCodeJunkies
                         Program.Toilet();
                         break;
                     }
-
-
                     
             }
 
-
-
-
-
-
-
-
-
-            string command;
+            
             command = Console.ReadLine();
 
             do
@@ -135,6 +157,7 @@ namespace EscapeRoomCodeJunkies
             Console.Clear();
             string strDiningRoomTxt = System.IO.File.ReadAllText(@"../../DiningroomA.txt");
             Console.Write(strDiningRoomTxt);
+            Console.SetCursorPosition(2, 17);
             Console.ReadLine();
             
         }
@@ -144,6 +167,7 @@ namespace EscapeRoomCodeJunkies
             Console.Clear();
             string strLivingRoomTxt = System.IO.File.ReadAllText(@"../../LivingRoom.txt");
             Console.Write(strLivingRoomTxt);
+            Console.SetCursorPosition(2, 17);
             Console.ReadLine();
         }
 
@@ -152,6 +176,7 @@ namespace EscapeRoomCodeJunkies
             Console.Clear();
             string strMortuariumTxt = System.IO.File.ReadAllText(@"../../Mortuarium.txt");
             Console.Write(strMortuariumTxt);
+            Console.SetCursorPosition(2, 17);
             Console.ReadLine();
         }
 
@@ -160,6 +185,7 @@ namespace EscapeRoomCodeJunkies
             Console.Clear();
             string strToiletTxt = System.IO.File.ReadAllText(@"../../Toilet.txt");
             Console.Write(strToiletTxt);
+            Console.SetCursorPosition(2, 17);
             Console.ReadLine();
         }
         
