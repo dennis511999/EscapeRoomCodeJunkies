@@ -21,7 +21,7 @@ namespace EscapeRoomCodeJunkies
             Console.WindowHeight = 20;
             Console.WindowWidth = 128;
             string strMenuText = System.IO.File.ReadAllText(@"../../Basement.txt");
-            Console.WriteLine(strMenuText);
+            Console.WriteLine(strMenuText); 
             Console.SetCursorPosition(2, 17);
             Console.ReadLine();
 
