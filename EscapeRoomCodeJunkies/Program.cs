@@ -45,10 +45,10 @@ namespace EscapeRoomCodeJunkies
             for (int i = 0; i < strIntroText.Length; i++)
             {
                 Console.Write(strIntroText[i]);
-                Thread.Sleep(0);
+                Thread.Sleep(30);
             }
 
-            Console.ReadLine();
+            Thread.Sleep(600);
 
             Console.Clear();
 
@@ -57,35 +57,49 @@ namespace EscapeRoomCodeJunkies
             Console.SetCursorPosition(2, 17);
 
 
-            string strCellText = "1. Search the cell \n" +
-                                 "2. Try the lock \n";
-
-            for (int i = 0; i < strCellText.Length; i++)
-            {
-                Console.Write(strCellText[i]);
-                Thread.Sleep(0);
-                
-            }
+            
+       
+            Console.WriteLine("You search the cell. \n"+ "And guess what, you found a book." );
+            Thread.Sleep(1500);
+            Program.Book();
+            Console.WriteLine(" ");
+            Console.WriteLine("There is a hint written in the book. \n"+ "First is bad, Last is good.\n" + "a = 1, z = 26");
+            Console.WriteLine("");
+            Console.WriteLine("You looked at the lock. \n" +"Its need a four digit number to unlock.");
+            Console.Clear();
+            
+               
+            Console.WriteLine("1. Do you want to open the book again?");
+            Console.WriteLine("2. Try the lock");
+            
 
             command = Console.ReadLine();
 
             if (command == "1")
             {
-
+                Program.Book();
             }
             else
             {
-                
-                
-                
+
             }
-            
-            
 
-            
-            
+            do
+            {
+                Console.WriteLine("Enter the code");
+                command = Console.ReadLine();
+                if (command == "111155")
+                {
+                    Console.WriteLine("Good job you opend the cell.");
 
-            
+                }
+                else
+                {
+                    Console.WriteLine("Press (Y) to try again");
+                    command = Console.ReadLine();
+                }
+            } while (command == "y");
+
 
 
             Console.Clear();
@@ -189,6 +203,13 @@ namespace EscapeRoomCodeJunkies
             Console.ReadLine();
         }
         
+        static void Book()
+        {
+            Console.Clear();
+            string strBookText = System.IO.File.ReadAllText(@"../../Book.txt");
+            Console.Write(strBookText);
+            Console.ReadLine();
+        }
     }
 }
         
