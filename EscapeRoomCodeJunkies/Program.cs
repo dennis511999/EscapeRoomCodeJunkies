@@ -19,7 +19,8 @@ namespace EscapeRoomCodeJunkies
         static void Main(string[] args)
         {
             string command;
-            
+
+            //Start menu
 
             Console.WindowHeight = 36;
             Console.WindowWidth = 128;
@@ -53,6 +54,8 @@ namespace EscapeRoomCodeJunkies
 
             Console.Clear();
 
+            //First puzzle in the basement
+
             string strBasementText = System.IO.File.ReadAllText(@"../../Basement.txt");
             Console.WriteLine(strBasementText);
             Console.SetCursorPosition(1, 15);
@@ -64,7 +67,7 @@ namespace EscapeRoomCodeJunkies
 
             
             Console.SetCursorPosition(1, 21);
-            Console.WriteLine("There is a hint written in the book. ");
+            Console.WriteLine("There is a hint written in the book.");
             Console.SetCursorPosition(1, 22);
             Console.WriteLine("First is bad, Last is good");
             Console.SetCursorPosition(1, 23);
@@ -86,7 +89,7 @@ namespace EscapeRoomCodeJunkies
             {
                 Console.SetCursorPosition(1, 27);
                 Console.WriteLine("Enter the code");
-                Console.SetCursorPosition(1, 28);
+                
                 command = Console.ReadLine();
                 if (command == "111155")
                 {
@@ -102,8 +105,8 @@ namespace EscapeRoomCodeJunkies
 
 
             
+            //Halls and switch for other rooms
             
-
             do
             {
 
@@ -247,7 +250,15 @@ namespace EscapeRoomCodeJunkies
  
   
    
-            Console.ReadLine();
+            
+        }
+
+        static void ClearCurrentConsoleLine()
+        {
+            int currentLineCursor = Console.CursorTop;
+            Console.SetCursorPosition
+            Console.Write(new string('', Console.WindowWidth));
+            Console.SetCursorPosition(0, currentLineCursor);
         }
     }
 }
