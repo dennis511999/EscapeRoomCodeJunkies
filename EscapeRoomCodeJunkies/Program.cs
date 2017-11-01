@@ -254,53 +254,73 @@ namespace EscapeRoomCodeJunkies
                                             command = Console.ReadLine();
 
 
-                                            if (command == "red")
+                                            if (command == "green")
                                             {
-                                                Console.ResetColor();
-                                                Console.Clear();                                                
-                                                Console.BackgroundColor = ConsoleColor.DarkRed;
-                                                Program.Toilet();
-                                                Thread.Sleep(80);
+
                                                 Console.ResetColor();
                                                 Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.White;
+                                                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                                                Console.ForegroundColor = ConsoleColor.White;
                                                 Program.Toilet();
-                                                Thread.Sleep(80);
-                                                Console.ResetColor();
-                                                Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.DarkBlue;
-                                                Program.Toilet();
-                                                Thread.Sleep(80);
-                                                Console.ResetColor();
-                                                Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.DarkRed;
-                                                Program.Toilet();
-                                                Thread.Sleep(80);
-                                                Console.ResetColor();
-                                                Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.White;
-                                                Program.Toilet();
-                                                Thread.Sleep(80);
-                                                Console.ResetColor();
-                                                Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.DarkBlue;
-                                                Program.Toilet();
-                                                Thread.Sleep(80);
-                                                Console.ResetColor();
-                                                Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.DarkRed;
-                                                Program.Toilet();
-                                                Thread.Sleep(80);
-                                                Console.ResetColor();
-                                                Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.White;
-                                                Program.Toilet();
-                                                Thread.Sleep(80);
-                                                Console.ResetColor();
-                                                Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.DarkBlue;
-                                                Program.Toilet();
-                                                Thread.Sleep(80);
+                                                Console.SetCursorPosition(1, 15);
+                                                Console.WriteLine("Enter next colour.");
+                                                Console.SetCursorPosition(1, 16);
+                                                command = Console.ReadLine();
+
+                                                if (command == "red")
+                                                {
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.White;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.White;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(80);
+                                                }
+                                                else
+                                                {
+
+                                                }
+
+                                               
 
                                             }
                                             else
