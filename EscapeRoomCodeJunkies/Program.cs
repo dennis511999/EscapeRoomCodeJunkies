@@ -128,6 +128,8 @@ namespace EscapeRoomCodeJunkies
             do
             {
 
+                Console.ResetColor();
+
                 Console.Clear();
                 string strHallText = System.IO.File.ReadAllText(@"../../Hall.txt");
                 Console.WriteLine(strHallText);
@@ -147,6 +149,8 @@ namespace EscapeRoomCodeJunkies
                 {
                     case "1":
                         {
+                            Console.BackgroundColor = ConsoleColor.DarkBlue;
+                            Console.ForegroundColor = ConsoleColor.White;
                             Program.Dining();
                             Console.WriteLine("You have entered the Dining room.");
                             Console.SetCursorPosition(1, 16);
@@ -159,6 +163,8 @@ namespace EscapeRoomCodeJunkies
 
                     case "2":
                         {
+                            Console.BackgroundColor = ConsoleColor.DarkGreen;
+                            Console.ForegroundColor = ConsoleColor.White;
                             Program.Livingroom();
                             Console.WriteLine("You have entered the Living room.");
                             Console.SetCursorPosition(1, 16);
@@ -171,6 +177,8 @@ namespace EscapeRoomCodeJunkies
 
                     case "3":
                         {
+                            Console.BackgroundColor = ConsoleColor.DarkRed;
+                            Console.ForegroundColor = ConsoleColor.White;
                             Program.Mortuarium();
                             Console.WriteLine("You have entered the Mortuarium.");
                             Console.SetCursorPosition(1, 16);
@@ -183,6 +191,8 @@ namespace EscapeRoomCodeJunkies
 
                     case "4":
                         {
+                            Console.BackgroundColor = ConsoleColor.White;
+                            Console.ForegroundColor = ConsoleColor.Black;
                             Program.Toilet();
                             Console.WriteLine("You have entered the toilet.");
                             Console.SetCursorPosition(1, 16);
