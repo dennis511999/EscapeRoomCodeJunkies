@@ -22,7 +22,7 @@ namespace EscapeRoomCodeJunkies
 
             //Start menu
 
-            Console.WindowHeight = 36;
+            Console.WindowHeight = 45;
             Console.WindowWidth = 128;
             string strMenuText = System.IO.File.ReadAllText(@"../../Menu.txt");
             Console.WriteLine(strMenuText);
@@ -66,18 +66,18 @@ namespace EscapeRoomCodeJunkies
             
 
             
-            Console.SetCursorPosition(1, 21);
-            Console.WriteLine("There is a hint written in the book.");
-            Console.SetCursorPosition(1, 22);
-            Console.WriteLine("First is bad, Last is good");
             Console.SetCursorPosition(1, 23);
-            Console.WriteLine("a = 1, z = 26");
+            Console.WriteLine("There is a hint written in the book.");
             Console.SetCursorPosition(1, 24);
-            Console.WriteLine("You looked at the lock.");
+            Console.WriteLine("First is bad, Last is good");
             Console.SetCursorPosition(1, 25);
+            Console.WriteLine("a = 1, z = 26");
+            Console.SetCursorPosition(1, 26);
+            Console.WriteLine("You looked at the lock.");
+            Console.SetCursorPosition(1, 27);
             Console.WriteLine("Its need a six digit number to unlock.");
 
-            Console.SetCursorPosition(1, 26);
+            Console.SetCursorPosition(1, 29);
             Console.WriteLine("Try to open the lock.");
 
             
@@ -87,9 +87,18 @@ namespace EscapeRoomCodeJunkies
 
             do
             {
-                Console.SetCursorPosition(1, 27);
+                Console.SetCursorPosition(1, 32);
+                Program.ClearLine();
+                Console.SetCursorPosition(1, 33);
+                Program.ClearLine();
+                Console.SetCursorPosition(1, 34);
+                Program.ClearLine();
+                Console.SetCursorPosition(1, 31);
                 Console.WriteLine("Enter the code");
+                Console.SetCursorPosition(1, 32);
                 
+
+
                 command = Console.ReadLine();
                 if (command == "111155")
                 {
@@ -98,8 +107,17 @@ namespace EscapeRoomCodeJunkies
                 }
                 else
                 {
+                    
+                    Console.SetCursorPosition(1, 33);
                     Console.WriteLine("Press (Y) to try again");
+                    Console.SetCursorPosition(1, 34);
+
+
+
                     command = Console.ReadLine();
+
+
+
                 }
             } while (command == "y");
 
@@ -123,6 +141,7 @@ namespace EscapeRoomCodeJunkies
                 Console.WriteLine("3. Enter the Mortuarium.");
                 Console.SetCursorPosition(1, 19);
                 Console.WriteLine("4. Enter the Toilet");
+                Console.SetCursorPosition(1, 20);
 
                 switch (Console.ReadLine())
                 {
@@ -130,7 +149,9 @@ namespace EscapeRoomCodeJunkies
                         {
                             Program.Dining();
                             Console.WriteLine("You have entered the Dining room.");
-                            Console.WriteLine("|b. To go back");
+                            Console.SetCursorPosition(1, 16);
+                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 17);
                             command = Console.ReadLine();
                             break;
                         }
@@ -140,7 +161,9 @@ namespace EscapeRoomCodeJunkies
                         {
                             Program.Livingroom();
                             Console.WriteLine("You have entered the Living room.");
-                            Console.WriteLine("|b. To go back");
+                            Console.SetCursorPosition(1, 16);
+                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 17);
                             command = Console.ReadLine();
                             break;
                         }
@@ -150,7 +173,9 @@ namespace EscapeRoomCodeJunkies
                         {
                             Program.Mortuarium();
                             Console.WriteLine("You have entered the Mortuarium.");
-                            Console.WriteLine("|b. To go back");
+                            Console.SetCursorPosition(1, 16);
+                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 17);
                             command = Console.ReadLine();
                             break;
                         }
@@ -160,7 +185,9 @@ namespace EscapeRoomCodeJunkies
                         {
                             Program.Toilet();
                             Console.WriteLine("You have entered the toilet.");
-                            Console.WriteLine("|b. To go back");
+                            Console.SetCursorPosition(1, 16);
+                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 17);
                             command = Console.ReadLine();
                             break;
                         }
@@ -238,13 +265,13 @@ namespace EscapeRoomCodeJunkies
         
         static void Book()
         {
-            Console.SetCursorPosition(1, 17);
-            Console.WriteLine("A boy named Bernard said You know that's bad luck.");
             Console.SetCursorPosition(1, 18);
-            Console.WriteLine("If you do it too much then you tongue might get stuck.");
+            Console.WriteLine("A boy named Bernard said You know that's bad luck.");
             Console.SetCursorPosition(1, 19);
-            Console.WriteLine("When Bernard had a birthday, the cake was in place.");
+            Console.WriteLine("If you do it too much then you tongue might get stuck.");
             Console.SetCursorPosition(1, 20);
+            Console.WriteLine("When Bernard had a birthday, the cake was in place.");
+            Console.SetCursorPosition(1, 21);
             Console.WriteLine("And Cecily sang with a smirk on her face. ");
             
  
@@ -253,12 +280,9 @@ namespace EscapeRoomCodeJunkies
             
         }
 
-        static void ClearCurrentConsoleLine()
+        static void ClearLine()
         {
-            int currentLineCursor = Console.CursorTop;
-            Console.SetCursorPosition
-            Console.Write(new string('', Console.WindowWidth));
-            Console.SetCursorPosition(0, currentLineCursor);
+            Console.Write(new string(' ', Console.BufferWidth - Console.CursorLeft ));
         }
     }
 }
