@@ -45,10 +45,10 @@ namespace EscapeRoomCodeJunkies
             for (int i = 0; i < strIntroText.Length; i++)
             {
                 Console.Write(strIntroText[i]);
-                Thread.Sleep(30);
+                Thread.Sleep(0);
             }
 
-            Thread.Sleep(600);
+            Thread.Sleep(1000);
 
             Console.Clear();
 
@@ -60,13 +60,15 @@ namespace EscapeRoomCodeJunkies
             
        
             Console.WriteLine("You search the cell. \n"+ "And guess what, you found a book." );
-            Thread.Sleep(1500);
+            Console.WriteLine("");
             Program.Book();
+            Console.Clear();
             Console.WriteLine(" ");
             Console.WriteLine("There is a hint written in the book. \n"+ "First is bad, Last is good.\n" + "a = 1, z = 26");
             Console.WriteLine("");
-            Console.WriteLine("You looked at the lock. \n" +"Its need a four digit number to unlock.");
-            Console.Clear();
+            Console.WriteLine("You looked at the lock. \n" +"Its need a six digit number to unlock.");
+            
+            
             
                
             Console.WriteLine("1. Do you want to open the book again?");
@@ -86,6 +88,7 @@ namespace EscapeRoomCodeJunkies
 
             do
             {
+                Console.WriteLine("");
                 Console.WriteLine("Enter the code");
                 command = Console.ReadLine();
                 if (command == "111155")
@@ -102,41 +105,67 @@ namespace EscapeRoomCodeJunkies
 
 
 
-            Console.Clear();
-            string strHallText = System.IO.File.ReadAllText(@"../../Hall.txt");
-            Console.WriteLine(strHallText);
-            Console.SetCursorPosition(2, 17);
+            
 
-            switch (Console.ReadLine())
+            do
             {
-                case "1":
-                    {
-                        Program.Dining();
-                        break;
-                    }
-                    
 
-                case "2":
-                    {
-                        Program.Livingroom();
-                        break;
-                    }
-                    
+                Console.Clear();
+                string strHallText = System.IO.File.ReadAllText(@"../../Hall.txt");
+                Console.WriteLine(strHallText);
+                Console.SetCursorPosition(2, 17);
+                Console.WriteLine("You are in the Hall.");
+                Console.WriteLine("1. Enter the dining room.");
+                Console.WriteLine("2. Enter the Living room.");
+                Console.WriteLine("3. Enter the Mortuarium.");
+                Console.WriteLine("4. Enter the Toilet");
 
-                case "3":
-                    {
-                        Program.Mortuarium();
-                        break;
-                    }
-                    
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        {
+                            Program.Dining();
+                            Console.WriteLine("You have entered the Dining room.");
+                            Console.WriteLine("b. To go back");
+                            command = Console.ReadLine();
+                            break;
+                        }
 
-                case "4":
-                    {
-                        Program.Toilet();
-                        break;
-                    }
-                    
-            }
+
+                    case "2":
+                        {
+                            Program.Livingroom();
+                            Console.WriteLine("You have entered the Living room.");
+                            Console.WriteLine("b. To go back");
+                            command = Console.ReadLine();
+                            break;
+                        }
+
+
+                    case "3":
+                        {
+                            Program.Mortuarium();
+                            Console.WriteLine("You have entered the Mortuarium.");
+                            Console.WriteLine("b. To go back");
+                            command = Console.ReadLine();
+                            break;
+                        }
+
+
+                    case "4":
+                        {
+                            Program.Toilet();
+                            Console.WriteLine("You have entered the toilet.");
+                            Console.WriteLine("b. To go back");
+                            command = Console.ReadLine();
+                            break;
+                        }
+
+                }
+                
+            } while (command == "b");
+
+
 
             
             command = Console.ReadLine();
@@ -172,7 +201,7 @@ namespace EscapeRoomCodeJunkies
             string strDiningRoomTxt = System.IO.File.ReadAllText(@"../../DiningroomA.txt");
             Console.Write(strDiningRoomTxt);
             Console.SetCursorPosition(2, 17);
-            Console.ReadLine();
+            
             
         }
 
@@ -182,7 +211,7 @@ namespace EscapeRoomCodeJunkies
             string strLivingRoomTxt = System.IO.File.ReadAllText(@"../../LivingRoom.txt");
             Console.Write(strLivingRoomTxt);
             Console.SetCursorPosition(2, 17);
-            Console.ReadLine();
+            
         }
 
         static void Mortuarium()
@@ -191,7 +220,7 @@ namespace EscapeRoomCodeJunkies
             string strMortuariumTxt = System.IO.File.ReadAllText(@"../../Mortuarium.txt");
             Console.Write(strMortuariumTxt);
             Console.SetCursorPosition(2, 17);
-            Console.ReadLine();
+            
         }
 
         static void Toilet()
@@ -200,12 +229,12 @@ namespace EscapeRoomCodeJunkies
             string strToiletTxt = System.IO.File.ReadAllText(@"../../Toilet.txt");
             Console.Write(strToiletTxt);
             Console.SetCursorPosition(2, 17);
-            Console.ReadLine();
+            
         }
         
         static void Book()
         {
-            Console.Clear();
+            
             string strBookText = System.IO.File.ReadAllText(@"../../Book.txt");
             Console.Write(strBookText);
             Console.ReadLine();
