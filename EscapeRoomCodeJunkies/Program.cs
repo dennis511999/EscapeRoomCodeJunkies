@@ -134,7 +134,7 @@ namespace EscapeRoomCodeJunkies
                 Console.Clear();
                 string strHallText = System.IO.File.ReadAllText(@"../../Hall.txt");
                 Console.ForegroundColor = ConsoleColor.Black;
-                Console.BackgroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine(strHallText);
                 Console.SetCursorPosition(1, 15);
                 Console.WriteLine("You are in the Hall.");
@@ -154,7 +154,7 @@ namespace EscapeRoomCodeJunkies
                         {                            
                             Console.Clear();
                             Console.BackgroundColor = ConsoleColor.DarkBlue;
-                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.ForegroundColor = ConsoleColor.Black;
                             Program.Dining();
                             Console.WriteLine("You have entered the Dining room.");
                             Console.SetCursorPosition(1, 16);
@@ -169,7 +169,7 @@ namespace EscapeRoomCodeJunkies
                         {
                             Console.Clear();
                             Console.BackgroundColor = ConsoleColor.DarkGreen;
-                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.ForegroundColor = ConsoleColor.Black;
                             Program.Livingroom();
                             Console.WriteLine("You have entered the Living room.");
                             Console.SetCursorPosition(1, 16);
@@ -184,7 +184,7 @@ namespace EscapeRoomCodeJunkies
                         {
                             Console.Clear();
                             Console.BackgroundColor = ConsoleColor.DarkRed;
-                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.ForegroundColor = ConsoleColor.Black;
                             Program.Mortuarium();
                             Console.WriteLine("You have entered the Mortuarium.");
                             Console.SetCursorPosition(1, 16);
@@ -210,11 +210,7 @@ namespace EscapeRoomCodeJunkies
                                 Console.SetCursorPosition(1, 17);
                                 Console.WriteLine("b. To go back");
                                 Console.SetCursorPosition(1, 18);
-                                command = Console.ReadLine();                            
-
-
-                                
-                                
+                                command = Console.ReadLine();            
 
                                 if (command == "1")
                                 {
@@ -229,11 +225,11 @@ namespace EscapeRoomCodeJunkies
                                     Console.SetCursorPosition(1, 23);
                                     command = Console.ReadLine();
 
-                                    if (command == "white")
+                                    if (command == "yellow")
                                     {
                                         Console.ResetColor();
                                         Console.Clear();                                        
-                                        Console.BackgroundColor = ConsoleColor.White;
+                                        Console.BackgroundColor = ConsoleColor.DarkYellow;
                                         Console.ForegroundColor = ConsoleColor.Black;
                                         Program.Toilet();
                                         Console.SetCursorPosition(1, 15);
@@ -246,7 +242,7 @@ namespace EscapeRoomCodeJunkies
                                             Console.ResetColor();
                                             Console.Clear();                                            
                                             Console.BackgroundColor = ConsoleColor.DarkBlue;
-                                            Console.ForegroundColor = ConsoleColor.White;
+                                            Console.ForegroundColor = ConsoleColor.Black;
                                             Program.Toilet();
                                             Console.SetCursorPosition(1, 15);
                                             Console.WriteLine("Enter next colour.");
@@ -260,7 +256,7 @@ namespace EscapeRoomCodeJunkies
                                                 Console.ResetColor();
                                                 Console.Clear();
                                                 Console.BackgroundColor = ConsoleColor.DarkGreen;
-                                                Console.ForegroundColor = ConsoleColor.White;
+                                                Console.ForegroundColor = ConsoleColor.Black;
                                                 Program.Toilet();
                                                 Console.SetCursorPosition(1, 15);
                                                 Console.WriteLine("Enter next colour.");
@@ -273,47 +269,63 @@ namespace EscapeRoomCodeJunkies
                                                     Console.Clear();
                                                     Console.BackgroundColor = ConsoleColor.DarkRed;
                                                     Program.Toilet();
-                                                    Thread.Sleep(80);
+                                                    Thread.Sleep(120);
                                                     Console.ResetColor();
                                                     Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.White;
+                                                    Console.BackgroundColor = ConsoleColor.Yellow;
                                                     Program.Toilet();
-                                                    Thread.Sleep(80);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkBlue;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(80);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkGreen;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(80);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkRed;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(80);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.White;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(80);
+                                                    Thread.Sleep(120);
                                                     Console.ResetColor();
                                                     Console.Clear();
                                                     Console.BackgroundColor = ConsoleColor.DarkBlue;
                                                     Program.Toilet();
-                                                    Thread.Sleep(80);
+                                                    Thread.Sleep(120);
                                                     Console.ResetColor();
                                                     Console.Clear();
                                                     Console.BackgroundColor = ConsoleColor.DarkGreen;
                                                     Program.Toilet();
-                                                    Thread.Sleep(80);
+                                                    Thread.Sleep(120);
                                                     Console.ResetColor();
                                                     Console.Clear();
                                                     Console.BackgroundColor = ConsoleColor.DarkRed;
                                                     Program.Toilet();
-                                                    Thread.Sleep(80);
+                                                    Thread.Sleep(120);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.Yellow;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(120);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(120);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(120);
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                                                    Program.Toilet();
+                                                    Thread.Sleep(120);
+
+                                                    Console.ResetColor();
+                                                    Console.Clear();
+                                                    Program.Toilet();
+                                                    Console.SetCursorPosition(1, 15);
+                                                    Console.WriteLine("The mirror went open.");
+                                                    Console.SetCursorPosition(1, 16);
+                                                    Console.WriteLine("In it is a note.");
+                                                    Console.SetCursorPosition(1, 17);
+                                                    Console.WriteLine("You have succeeded this puzzle.");
+                                                    Console.SetCursorPosition(1, 18);
+                                                    Console.WriteLine("...CODE...");
+                                                    Console.SetCursorPosition(1, 19);
+                                                    Console.WriteLine("b. Go back to the hall");
+                                                    Console.SetCursorPosition(1, 20);
+                                                    command = Console.ReadLine();
                                                 }
                                                 else
                                                 {
@@ -336,12 +348,17 @@ namespace EscapeRoomCodeJunkies
                                     }
                                     else
                                     {
+                                        Console.SetCursorPosition(1, 24);
+                                        Console.WriteLine("retry (y)");
+                                        Console.SetCursorPosition(1, 25);
+                                        command = Console.ReadLine();
                                         Console.Clear();
                                     }                         
                                 }
                                 else
                                 {
-                                    Console.Clear();
+                                    
+                                   
                                 }
 
                             } while (command == "y");
