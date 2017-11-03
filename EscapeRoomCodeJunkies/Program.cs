@@ -436,7 +436,15 @@ namespace EscapeRoomCodeJunkies
             Console.Write(strToiletTxt);
             Console.SetCursorPosition(1, 15);
             
-        }       
+        }
+        
+        static void Exit()
+        {
+            Console.Clear();
+            string strExitTxt = System.IO.File.ReadAllText(@"../../Exit.txt");
+            Console.Write(strExitTxt);
+            Console.SetCursorPosition(1, 15);
+        }
      
 
         static void ClearLine()
