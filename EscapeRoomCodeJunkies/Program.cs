@@ -184,12 +184,34 @@ namespace EscapeRoomCodeJunkies
                             do
                             {
                                 if (command == "1")
-                                {
+                                {      
                                     Console.Clear();
-
+                                    Program.Livingroom();
+                                    Console.WriteLine("Enter the 3 digit code");
+                                    Console.SetCursorPosition(1, 16);
+                                    command = Console.ReadLine();
                                 }
+                                else { }
 
+                                    if (command == "782")
+                                    {
+                                        Console.Clear();
+                                        Program.Livingroom();
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("You have entered the right code, the safe is now open.");
+                                        Console.SetCursorPosition(1, 16);
+                                        Console.WriteLine("In the safe you found a note with the digits 45, these will be used in the final code lock, to escape.");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine("Press b to go back");
+                                        Console.SetCursorPosition(1,18);
+                                        command = Console.ReadLine();
+                                        
+                                        
+                                        
 
+                                    }
+
+                                    else { }
 
 
 
