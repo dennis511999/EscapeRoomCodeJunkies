@@ -186,14 +186,76 @@ namespace EscapeRoomCodeJunkies
                             Console.BackgroundColor = ConsoleColor.DarkRed;
                             Console.ForegroundColor = ConsoleColor.Black;
                             Program.Mortuarium();
+                            Console.SetCursorPosition(1, 15);
                             Console.WriteLine("You have entered the Mortuarium.");
                             Console.SetCursorPosition(1, 16);
-                            Console.WriteLine("b. To go back");
+                            Console.WriteLine("Answer this riddle to know which drawer you have to open. If you open the wrong one the room wil explode");
                             Console.SetCursorPosition(1, 17);
+                            Console.WriteLine("You found a note on the table, press 1 to open the note");
+                            Console.SetCursorPosition(1, 18);
+                            Console.WriteLine("1. Open the note");
+                            Console.SetCursorPosition(1, 19);
+                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 20);
+                            command = Console.ReadLine();
+                            
+                           
+
+                            do
+                            {
+                                if (command == "1")
+                                {
+                                    Console.Clear();
+                                    Program.Mortuarium();
+                                    Console.SetCursorPosition(1, 15);
+                                    Console.WriteLine(",siuh njiz naa siuhthcals nee tem siuh toorg nee tfeeh nam neE");
+                                    Console.SetCursorPosition(1, 16);
+                                    Console.WriteLine(",neod naag et nepokni mo niz neeg tfeeh nam ed ne reew ioom teh si anre gad eD ,sejteggib eioom 3 nav tizeb nam ed");
+                                    Console.SetCursorPosition(1, 17);
+                                    Console.WriteLine(".nete nak eilimaf eleh ed tem jih tadoz nethcals et sejtnekrav eioom ed nav 2 mo tiulseb nam ed sud");
+                                    Console.SetCursorPosition(1, 18);
+                                    Console.WriteLine("? revo re nevjilb sejteggib leeveoH");
+                                    Console.SetCursorPosition(1, 19);
+                                    Console.WriteLine("What is the answer to this Riddle?");
+                                    Console.SetCursorPosition(1, 21);
+                                    command = Console.ReadLine(); 
+
+
+                                    if (command == "3")
+                                    {
+                                        Console.Clear();
+                                        Program.Mortuarium();
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("That is the right answer!");
+                                        Console.SetCursorPosition(1, 16);
+                                        Console.WriteLine("You have opened locker number 3");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine("You found a note with the numbers 782, it must be for some kind of safe.");
+                                        Console.ReadLine();
+                                    }
+
+                                    else  { }
+
+                                }
+                                else
+                                {
+                                    Console.Clear();
+                                    Program.Mortuarium();
+                                    Console.SetCursorPosition(1, 15);
+                                    Console.WriteLine("Do you want to try again ? (y)");
+                                    Console.SetCursorPosition(1, 16);
+                                    command = Console.ReadLine();
+                                }
+
+                            } while (command == "y");
+                            Console.Clear();
+                            Program.Mortuarium();
+                            Console.SetCursorPosition(1, 15);
+                            Console.WriteLine("Press b to go back to the hall");
+                            Console.SetCursorPosition(1, 16);
                             command = Console.ReadLine();
                             break;
                         }
-
 
                     case "4":
                         {                         
