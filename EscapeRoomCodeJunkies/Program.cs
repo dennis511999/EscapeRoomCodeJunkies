@@ -391,7 +391,11 @@ namespace EscapeRoomCodeJunkies
                                                 }
                                                 else
                                                 {
-
+                                                    Console.SetCursorPosition(1, 24);
+                                                    Console.WriteLine("retry (y)");
+                                                    Console.SetCursorPosition(1, 25);
+                                                    command = Console.ReadLine();
+                                                    Console.Clear();
                                                 }
 
                                                
@@ -399,11 +403,19 @@ namespace EscapeRoomCodeJunkies
                                             }
                                             else
                                             {
+                                                Console.SetCursorPosition(1, 24);
+                                                Console.WriteLine("retry (y)");
+                                                Console.SetCursorPosition(1, 25);
+                                                command = Console.ReadLine();
                                                 Console.Clear();
                                             }  
                                         }
                                         else
                                         {
+                                            Console.SetCursorPosition(1, 24);
+                                            Console.WriteLine("retry (y)");
+                                            Console.SetCursorPosition(1, 25);
+                                            command = Console.ReadLine();
                                             Console.Clear();
                                         }
                                         
