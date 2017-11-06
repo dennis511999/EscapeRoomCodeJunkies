@@ -172,10 +172,34 @@ namespace EscapeRoomCodeJunkies
                             Console.ForegroundColor = ConsoleColor.Black;
                             Program.Livingroom();
                             Console.WriteLine("You have entered the Living room.");
-                            Console.SetCursorPosition(1, 16);
-                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 15);
+                            Console.WriteLine("You can open the Safe in this room, it requires a 3 digit code which you can get in another room.");
                             Console.SetCursorPosition(1, 17);
+                            Console.WriteLine("1. To try the code lock");
+                            Console.SetCursorPosition(1, 18);
+                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 19);
                             command = Console.ReadLine();
+
+                            do
+                            {
+                                if (command == "1")
+                                {
+                                    Console.Clear();
+
+                                }
+
+
+
+
+
+
+
+
+                            } while (command == "y"); 
+
+
+
                             break;
                         }
 
@@ -208,13 +232,13 @@ namespace EscapeRoomCodeJunkies
                                     Console.Clear();
                                     Program.Mortuarium();
                                     Console.SetCursorPosition(1, 15);
-                                    Console.WriteLine(",siuh njiz naa siuhthcals nee tem siuh toorg nee tfeeh nam neE");
+                                    Console.WriteLine(".esuoh sih ta esuohrethguals a htiw esuoh gib a sah nam A");
                                     Console.SetCursorPosition(1, 16);
-                                    Console.WriteLine(",neod naag et nepokni mo niz neeg tfeeh nam ed ne reew ioom teh si anre gad eD ,sejteggib eioom 3 nav tizeb nam ed");
+                                    Console.WriteLine(".gnippohs  tuo og ot tnaw ton seod nam eht dna dab si rehtaew eht yad txen ehT .stelgip lufituaeb 3 snwo nam eht");
                                     Console.SetCursorPosition(1, 17);
-                                    Console.WriteLine(".nete nak eilimaf eleh ed tem jih tadoz nethcals et sejtnekrav eioom ed nav 2 mo tiulseb nam ed sud");
+                                    Console.WriteLine(".ylimaf elohw eht htiw tae nac eh taht os sgip lufituaeb eht fo 2 rethguals ot sediced nam eht os");
                                     Console.SetCursorPosition(1, 18);
-                                    Console.WriteLine("? revo re nevjilb sejteggib leeveoH");
+                                    Console.WriteLine("? tfel era stelgip ynam woH");
                                     Console.SetCursorPosition(1, 19);
                                     Console.WriteLine("What is the answer to this Riddle?");
                                     Console.SetCursorPosition(1, 21);
