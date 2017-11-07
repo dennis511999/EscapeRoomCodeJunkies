@@ -50,7 +50,7 @@ namespace EscapeRoomCodeJunkies
                 Thread.Sleep(1);
             }
 
-            Thread.Sleep(1000);
+            Thread.Sleep(4800);
 
             Console.Clear();
 
