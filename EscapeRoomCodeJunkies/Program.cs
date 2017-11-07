@@ -198,37 +198,36 @@ namespace EscapeRoomCodeJunkies
                                     Console.SetCursorPosition(3, 24);
                                     Console.WriteLine("there are seven people in my family, with five children including me.");
                                     Console.SetCursorPosition(3, 25);
-                                    Console.WriteLine("The second eldest is four years younger than me. The second eldest girl, who I get on with really well, is three years younger than the eldest girl.");
+                                    Console.WriteLine("The second eldest is four years younger than me. The second eldest girl, who I get on with really well,");
                                     Console.SetCursorPosition(3, 26);
-                                    Console.WriteLine("The eldest boy is four years younger than the eldest girl, and three years older than the youngest boy. ");
+                                    Console.WriteLine(" is three years younger than the eldest girl.");
                                     Console.SetCursorPosition(3, 27);
-                                    Console.WriteLine("We all have the same parents. If the second eldest girl is nineteen years old, how old am I?");
+                                    Console.WriteLine("The eldest boy is four years younger than the eldest girl, and three years older than the youngest boy. ");
                                     Console.SetCursorPosition(3, 28);
+                                    Console.WriteLine("We all have the same parents. If the second eldest girl is nineteen years old, how old am I?");
+                                    Console.SetCursorPosition(3, 30);
+                                    Console.WriteLine("Answer this riddle to escape the sewers !");
+                                    Console.SetCursorPosition(45, 30);
+                                    command = Console.ReadLine();
 
 
                                 }
                                 else { }
 
+                                if (command == "19")
+                                {
+                                    Console.Clear();
+                                    Console.SetCursorPosition(1, 5);
+                                    Console.WriteLine("Congratulations ! you have escaped the sewers !");
+                                    Console.WriteLine("Press any key to exit the game.");
+                                    Console.ReadLine();
+                                }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                else
+                                {
+                                    Console.WriteLine("That is the wrong answer, try again. Press y to try again");
+                                    command = Console.ReadLine();
+                                }
 
 
                             } while (command == "y");
@@ -583,33 +582,6 @@ namespace EscapeRoomCodeJunkies
                 }
                 
             } while (command == "b");
-
-
-
-            
-            command = Console.ReadLine();
-
-            do
-            {
-                if (Escape == true)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Congratulations! You Made it out! ");
-                    Console.WriteLine("Press any key to exit ");
-                    Console.ReadLine();
-
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine("You didn't make it out in time, want to try again? (Y/N) ");
-
-                }
-
-
-            }
-            while (command == "Y");
-
 
 
         }
