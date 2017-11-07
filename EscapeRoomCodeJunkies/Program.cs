@@ -92,7 +92,7 @@ namespace EscapeRoomCodeJunkies
                 Console.SetCursorPosition(1, 33);
                 Program.ClearLine();
                 Console.SetCursorPosition(1, 34);
-                Program.ClearLine();
+                Program.ClearLine();                
                 Console.SetCursorPosition(1, 31);
                 Console.WriteLine("Enter the code");
                 Console.SetCursorPosition(1, 32);
@@ -120,8 +120,6 @@ namespace EscapeRoomCodeJunkies
 
                 }
             } while (command == "y");
-
-
             
             //Halls and switches for other rooms
             
@@ -635,6 +633,7 @@ namespace EscapeRoomCodeJunkies
         static void ClearLine()
         {
             Console.Write(new string(' ', Console.BufferWidth - Console.CursorLeft ));
+            
         }
     }
 }
