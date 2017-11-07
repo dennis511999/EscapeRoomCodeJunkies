@@ -19,6 +19,7 @@ namespace EscapeRoomCodeJunkies
         static void Main(string[] args)
         {
             string command;
+          
 
             //Start menu
 
@@ -43,13 +44,14 @@ namespace EscapeRoomCodeJunkies
             "Start by finding the code to open your cell door. \n";
 
 
+
             for (int i = 0; i < strIntroText.Length; i++)
             {
                 Console.Write(strIntroText[i]);
-                Thread.Sleep(1);
+                Thread.Sleep(0);
             }
 
-            Thread.Sleep(1000);
+            Thread.Sleep(4800);
 
             Console.Clear();
 
@@ -80,10 +82,10 @@ namespace EscapeRoomCodeJunkies
             Console.SetCursorPosition(1, 27);
             Console.WriteLine("Its need a six digit number to unlock.");
             Console.SetCursorPosition(1, 29);
-            Console.WriteLine("Try to open the lock.");           
-            
+            Console.WriteLine("Try to open the lock.");
 
-            
+
+            bool blnContinue = true;
 
             do
             {
@@ -92,34 +94,35 @@ namespace EscapeRoomCodeJunkies
                 Console.SetCursorPosition(1, 33);
                 Program.ClearLine();
                 Console.SetCursorPosition(1, 34);
-                Program.ClearLine();                
+                Program.ClearLine();
                 Console.SetCursorPosition(1, 31);
                 Console.WriteLine("Enter the code");
                 Console.SetCursorPosition(1, 32);
-                
 
 
+                ConsoleKeyInfo ckiCommand;
                 command = Console.ReadLine();
+
                 if (command == "111155")
                 {
-                    Console.WriteLine("Good job you opend the cell.");
+                    Console.WriteLine("Good job you opened the cell.\r\nPress any key to continue.");
+                    Console.ReadKey();
+                    blnContinue = false;
 
                 }
                 else
                 {
                     
                     Console.SetCursorPosition(1, 33);
-                    Console.WriteLine("Press (Y) to try again");
+                    Console.WriteLine("Press any key to try again");
                     Console.SetCursorPosition(1, 34);
-
-
-
-                    command = Console.ReadLine();
-
-
+                    Console.ReadKey();
 
                 }
-            } while (command == "y");
+              
+            } while (blnContinue);
+
+
             
             //Halls and switches for other rooms
             
@@ -150,102 +153,14 @@ namespace EscapeRoomCodeJunkies
                     case "1":
                         {                            
                             Console.Clear();
-                            Console.BackgroundColor = ConsoleColor.DarkBlue;
+                            Console.BackgroundColor = ConsoleColor.Blue;
                             Console.ForegroundColor = ConsoleColor.Black;
                             Program.Dining();
-                            Console.WriteLine("You have entered the Dining room, you see the table in front of you, it requires a 4 digit code.");
+                            Console.WriteLine("You have entered the Dining room.");
                             Console.SetCursorPosition(1, 16);
-                            Console.WriteLine("1. To try the code lock ");
-                            Console.SetCursorPosition(1, 17);
                             Console.WriteLine("b. To go back");
-                            Console.SetCursorPosition(1, 18);
+                            Console.SetCursorPosition(1, 17);
                             command = Console.ReadLine();
-
-                            if (command == "1")
-                            {
-                                Console.Clear();
-                                Program.Dining();
-                                Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
-                                Console.SetCursorPosition(1, 16);
-                                command = Console.ReadLine();
-                            }
-                            else { }
-
-                            do
-                            {
-                               
-
-                                if (command == "4505")
-                                {
-                                    Console.Clear();
-                                    Program.DiningroomB();
-                                    Console.SetCursorPosition(42, 15);
-                                    Console.WriteLine("A ladder hatch has opened under the table, it might be the exit !");
-                                    Console.SetCursorPosition(42, 17);
-                                    Console.WriteLine("Press 1 to go down the ladder");
-                                    Console.SetCursorPosition(42, 18);
-                                    command = Console.ReadLine();
-                                    
-                                }
-                                else { }
-
-                                if (command == "1")
-                                {
-                                    Console.Clear();
-                                    Program.Exit();
-                                    Console.SetCursorPosition(3, 23);
-                                    Console.WriteLine("This is the last puzzle, give the right answer and you will be a free bird.");
-                                    Console.SetCursorPosition(3, 24);
-                                    Console.WriteLine("there are seven people in my family, with five children including me.");
-                                    Console.SetCursorPosition(3, 25);
-                                    Console.WriteLine("The second eldest is four years younger than me. The second eldest girl, who I get on with really well,");
-                                    Console.SetCursorPosition(3, 26);
-                                    Console.WriteLine(" is three years younger than the eldest girl.");
-                                    Console.SetCursorPosition(3, 27);
-                                    Console.WriteLine("The eldest boy is four years younger than the eldest girl, and three years older than the youngest boy. ");
-                                    Console.SetCursorPosition(3, 28);
-                                    Console.WriteLine("We all have the same parents. If the second eldest girl is nineteen years old, how old am I?");
-                                    Console.SetCursorPosition(3, 30);
-                                    Console.WriteLine("Answer this riddle to escape the sewers !");
-                                    Console.SetCursorPosition(45, 30);
-                                    command = Console.ReadLine();
-
-
-                                }
-                                else { }
-
-                                if (command == "19")
-                                {
-                                    Console.Clear();
-                                    Console.SetCursorPosition(1, 5);
-                                    Console.WriteLine("Congratulations ! you have escaped the sewers !");
-                                    Console.WriteLine("Press any key to exit the game.");
-                                    Console.ReadLine();
-                                }
-
-                                else
-                                {
-                                    Console.WriteLine("That is the wrong answer, try again. Press y to try again");
-                                    command = Console.ReadLine();
-                                }
-
-
-                            } while (command == "y");
-
-                        
-                                
-                                
-
-
-
-
-
-
-
-
-
-
-
                             break;
                         }
 
@@ -365,14 +280,7 @@ namespace EscapeRoomCodeJunkies
                                         Console.ReadLine();
                                     }
 
-                                    else  {
-                                        Console.Clear();
-                                        Program.Mortuarium();
-                                        Console.SetCursorPosition(1, 15);
-                                        Console.WriteLine("Do you want to try again ? (y)");
-                                        Console.SetCursorPosition(1, 16);
-                                        command = Console.ReadLine();
-                                    }
+                                    else  { }
 
                                 }
                                 else
@@ -521,7 +429,7 @@ namespace EscapeRoomCodeJunkies
                                                     Console.SetCursorPosition(1, 17);
                                                     Console.WriteLine("You have succeeded this puzzle.");
                                                     Console.SetCursorPosition(1, 18);
-                                                    Console.WriteLine("05");
+                                                    Console.WriteLine("...CODE...");
                                                     Console.SetCursorPosition(1, 19);
                                                     Console.WriteLine("b. Go back to the hall");
                                                     Console.SetCursorPosition(1, 20);
@@ -584,6 +492,33 @@ namespace EscapeRoomCodeJunkies
             } while (command == "b");
 
 
+
+            
+            command = Console.ReadLine();
+
+            do
+            {
+                if (Escape == true)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Congratulations! You Made it out! ");
+                    Console.WriteLine("Press any key to exit ");
+                    Console.ReadLine();
+
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("You didn't make it out in time, want to try again? (Y/N) ");
+
+                }
+
+
+            }
+            while (command == "Y");
+
+
+
         }
 
         static void Dining()
@@ -635,15 +570,6 @@ namespace EscapeRoomCodeJunkies
         static void ClearLine()
         {
             Console.Write(new string(' ', Console.BufferWidth - Console.CursorLeft ));
-            
-        }
-
-        static void DiningroomB()
-        {
-            Console.Clear();
-            string strDiningroomBtxt = System.IO.File.ReadAllText(@"../../DiningroomB.txt");
-            Console.Write(strDiningroomBtxt);
-            Console.SetCursorPosition(1, 15);
         }
     }
 }
