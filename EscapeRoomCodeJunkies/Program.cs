@@ -43,7 +43,6 @@ namespace EscapeRoomCodeJunkies
             "Start by finding the code to open your cell door. \n";
 
 
-
             for (int i = 0; i < strIntroText.Length; i++)
             {
                 Console.Write(strIntroText[i]);
