@@ -50,7 +50,7 @@ namespace EscapeRoomCodeJunkies
                 Thread.Sleep(0);
             }
 
-            Thread.Sleep(4800);
+            Thread.Sleep(1000);
 
             Console.Clear();
 
@@ -280,7 +280,14 @@ namespace EscapeRoomCodeJunkies
                                         Console.ReadLine();
                                     }
 
-                                    else  { }
+                                    else  {
+                                        Console.Clear();
+                                        Program.Mortuarium();
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("Do you want to try again ? (y)");
+                                        Console.SetCursorPosition(1, 16);
+                                        command = Console.ReadLine();
+                                    }
 
                                 }
                                 else
