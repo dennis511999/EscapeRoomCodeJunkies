@@ -163,7 +163,7 @@ namespace EscapeRoomCodeJunkies
                             Console.WriteLine("b. To go back");
                             Console.SetCursorPosition(1, 18);
                             command = Console.ReadLine();
-                            break;
+                            
 
                             int intQuestion = 1;                          
 
@@ -171,24 +171,28 @@ namespace EscapeRoomCodeJunkies
                                 switch (intQuestion)
                                 {
                                     case 1:
-                                        {
-                                            Console.Clear();
-                                            Program.Dining();
-                                            Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
-                                            Console.SetCursorPosition(1, 16);
-                                            
-                                            if (Console.ReadLine() == "4505")                                                 
-                                            {
-                                                
-                                                goto case 2;
+                                    {
+                                        Console.Clear();
+                                        Program.Dining();
+                                        Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
+                                        Console.SetCursorPosition(1, 16);
 
-                                            }
-                                            else
-                                            {
-                                                goto case 1;
-                                            }
-                                                                                                                              
+                                        if (Console.ReadLine() == "4505")
+                                        {
+
+                                            goto case 2;
+
                                         }
+                                        else
+                                        {
+                                            goto case 1;
+                                        }
+                                        
+                                    }
+                                        
+
+                                                                                                                      
+                                        
 
                                     case 2:
                                         {
@@ -248,7 +252,7 @@ namespace EscapeRoomCodeJunkies
                                         {
                                             Console.Clear();
                                            
-                                            Console.SetCursorPosition(1, 5);
+                                            Console.SetCursorPosition(0, 5);
                                             Console.WriteLine("Congratulations ! you have escaped the sewers !");
                                             Console.WriteLine("Press 1 to exit the game.");
                                             ConsoleKeyInfo ckiCommand;                                            
@@ -256,7 +260,7 @@ namespace EscapeRoomCodeJunkies
                                             
                                             if(command == "1")
                                             {
-                                            Console.SetCursorPosition(1, 6);
+                                            Console.SetCursorPosition(0, 8);
                                             Console.WriteLine("hello");
                                             Console.ReadLine();
                                             }
@@ -267,6 +271,7 @@ namespace EscapeRoomCodeJunkies
                                                
                                             break;                                          
                                         }
+                                    
 
                                 }                               
 
