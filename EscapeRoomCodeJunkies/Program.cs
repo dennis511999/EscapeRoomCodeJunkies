@@ -19,6 +19,7 @@ namespace EscapeRoomCodeJunkies
         static void Main(string[] args)
         {
             string command;
+          
 
             //Start menu
 
@@ -81,10 +82,10 @@ namespace EscapeRoomCodeJunkies
             Console.SetCursorPosition(1, 27);
             Console.WriteLine("Its need a six digit number to unlock.");
             Console.SetCursorPosition(1, 29);
-            Console.WriteLine("Try to open the lock.");           
-            
+            Console.WriteLine("Try to open the lock.");
 
-            
+
+            bool blnContinue = true;
 
             do
             {
@@ -97,30 +98,29 @@ namespace EscapeRoomCodeJunkies
                 Console.SetCursorPosition(1, 31);
                 Console.WriteLine("Enter the code");
                 Console.SetCursorPosition(1, 32);
-                
 
 
+                ConsoleKeyInfo ckiCommand;
                 command = Console.ReadLine();
+
                 if (command == "111155")
                 {
-                    Console.WriteLine("Good job you opend the cell.");
+                    Console.WriteLine("Good job you opened the cell.\r\nPress any key to continue.");
+                    Console.ReadKey();
+                    blnContinue = false;
 
                 }
                 else
                 {
                     
                     Console.SetCursorPosition(1, 33);
-                    Console.WriteLine("Press (Y) to try again");
+                    Console.WriteLine("Press any key to try again");
                     Console.SetCursorPosition(1, 34);
-
-
-
-                    command = Console.ReadLine();
-
-
+                    Console.ReadKey();
 
                 }
-            } while (command == "y");
+              
+            } while (blnContinue);
 
 
             
@@ -153,7 +153,7 @@ namespace EscapeRoomCodeJunkies
                     case "1":
                         {                            
                             Console.Clear();
-                            Console.BackgroundColor = ConsoleColor.DarkBlue;
+                            Console.BackgroundColor = ConsoleColor.Blue;
                             Console.ForegroundColor = ConsoleColor.Black;
                             Program.Dining();
                             Console.WriteLine("You have entered the Dining room.");
