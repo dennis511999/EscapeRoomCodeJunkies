@@ -51,7 +51,7 @@ namespace EscapeRoomCodeJunkies
                 Thread.Sleep(0);
             }
 
-            Thread.Sleep(4800);
+            Thread.Sleep(0);
 
             Console.Clear();
 
@@ -162,10 +162,14 @@ namespace EscapeRoomCodeJunkies
                             Console.SetCursorPosition(1, 17);
                             Console.WriteLine("b. To go back");
                             Console.SetCursorPosition(1, 18);
-                            command = Console.ReadLine();
+                            
 
+                            
                             do
                             {
+                                ConsoleKeyInfo ckiCommand;
+                                command = Console.ReadLine();
+
                                 if (command == "1")
                                 {
                                     Console.Clear();
@@ -173,6 +177,7 @@ namespace EscapeRoomCodeJunkies
                                     Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
                                     Console.SetCursorPosition(1, 16);
                                     command = Console.ReadLine();
+                                    blnContinue = false;
 
                                     if(command == "4505")
                                     {
@@ -184,8 +189,9 @@ namespace EscapeRoomCodeJunkies
                                         Console.WriteLine("Press 1 to go down the ladder");
                                         Console.SetCursorPosition(42, 18);
                                         command = Console.ReadLine();
+                                        blnContinue = false;
 
-                                        if(command == "1")
+                                        if (command == "1")
                                         {
                                             Console.Clear();
                                             Program.Exit();
@@ -205,35 +211,54 @@ namespace EscapeRoomCodeJunkies
                                             Console.WriteLine("Answer this riddle to escape the sewers !");
                                             Console.SetCursorPosition(45, 30);
                                             command = Console.ReadLine();
+                                            blnContinue = false;
 
-                                            if(command == "19")
+                                            if (command == "19")
                                             {
                                                 Console.Clear();
                                                 Console.SetCursorPosition(1, 5);
                                                 Console.WriteLine("Congratulations ! you have escaped the sewers !");
                                                 Console.WriteLine("Press any key to exit the game.");
-                                                Console.ReadLine();
+                                                command = Console.ReadLine();
+                                                blnContinue = false;
                                             }
                                             else
                                             {
-
+                                                Console.SetCursorPosition(1, 33);
+                                                Console.WriteLine("Press any key to try again");
+                                                Console.SetCursorPosition(1, 34);
+                                                Console.ReadKey();
+                                                blnContinue = true;
                                             }
                                         }
                                         else
                                         {
-
+                                            Console.SetCursorPosition(1, 33);
+                                            Console.WriteLine("Press any key to try again");
+                                            Console.SetCursorPosition(1, 34);
+                                            Console.ReadKey();
+                                            blnContinue = false;
                                         }
                                     }
                                     else
                                     {
+                                        Console.SetCursorPosition(1, 33);
+                                        Console.WriteLine("Press any key to try again");
+                                        Console.SetCursorPosition(1, 34);
+                                        Console.ReadKey();
+                                        blnContinue = true;
                                     }
                                 }
                                 else
                                 {
-
+                                    Console.SetCursorPosition(1, 33);
+                                    Console.WriteLine("Press any key to go back");
+                                    Console.SetCursorPosition(1, 34);
+                                    Console.ReadKey();
                                 }
 
-                            } while (command == "y");
+                            } while (blnContinue);
+
                             break;
                         }
 
@@ -654,8 +679,6 @@ namespace EscapeRoomCodeJunkies
         }
     }
 }
-
-        
 
    
 
