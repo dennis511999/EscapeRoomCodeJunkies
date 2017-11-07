@@ -151,7 +151,7 @@ namespace EscapeRoomCodeJunkies
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        {                            
+                        {
                             Console.Clear();
                             Console.BackgroundColor = ConsoleColor.Blue;
                             Console.ForegroundColor = ConsoleColor.Black;
@@ -162,36 +162,55 @@ namespace EscapeRoomCodeJunkies
                             Console.SetCursorPosition(1, 17);
                             Console.WriteLine("b. To go back");
                             Console.SetCursorPosition(1, 18);
-                            
+                            command = Console.ReadLine();
 
-                            
-                            do
-                            {
-                                ConsoleKeyInfo ckiCommand;
-                                command = Console.ReadLine();
+                            int intQuestion = 1;                          
 
-                                if (command == "1")
+                                                           
+                                switch (intQuestion)
                                 {
-                                    Console.Clear();
-                                    Program.Dining();
-                                    Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
-                                    Console.SetCursorPosition(1, 16);
-                                    command = Console.ReadLine();
-                                    blnContinue = false;
+                                    case 1:
+                                        {
+                                            Console.Clear();
+                                            Program.Dining();
+                                            Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
+                                            Console.SetCursorPosition(1, 16);
+                                            
+                                            if (Console.ReadLine() == "4505")                                                 
+                                            {
+                                                
+                                                goto case 2;
 
-                                    if(command == "4505")
-                                    {
-                                        Console.Clear();
-                                        Program.DiningroomB();
-                                        Console.SetCursorPosition(42, 15);
-                                        Console.WriteLine("A ladder hatch has opened under the table, it might be the exit !");
-                                        Console.SetCursorPosition(42, 17);
-                                        Console.WriteLine("Press 1 to go down the ladder");
-                                        Console.SetCursorPosition(42, 18);
-                                        command = Console.ReadLine();
-                                        blnContinue = false;
+                                            }
+                                            else
+                                            {
+                                                goto case 1;
+                                            }
+                                                                                                                              
+                                        }
 
-                                        if (command == "1")
+                                    case 2:
+                                        {
+                                            
+                                            Console.Clear();
+                                            Program.DiningroomB();
+                                            Console.SetCursorPosition(42, 15);
+                                            Console.WriteLine("A ladder hatch has opened under the table, it might be the exit !");
+                                            Console.SetCursorPosition(42, 17);
+                                            Console.WriteLine("Press 1 to go down the ladder");
+                                            Console.SetCursorPosition(42, 18);
+                                            if (Console.ReadLine() == "1")
+                                            {
+                                                goto case 3;
+                                            }
+                                            else
+                                            {
+                                                goto case 2;
+                                            }
+                                            
+                                        }
+
+                                    case 3:
                                         {
                                             Console.Clear();
                                             Program.Exit();
@@ -210,57 +229,47 @@ namespace EscapeRoomCodeJunkies
                                             Console.SetCursorPosition(3, 30);
                                             Console.WriteLine("Answer this riddle to escape the sewers !");
                                             Console.SetCursorPosition(45, 30);
-                                            command = Console.ReadLine();
-                                            blnContinue = false;
 
-                                            if (command == "19")
+                                            if (Console.ReadLine() == "19")
                                             {
-                                                Console.Clear();
-                                                Console.SetCursorPosition(1, 5);
-                                                Console.WriteLine("Congratulations ! you have escaped the sewers !");
-                                                Console.WriteLine("Press any key to exit the game.");
-                                                command = Console.ReadLine();
-                                                blnContinue = false;
+                                                goto case 4;
+
                                             }
                                             else
                                             {
-                                                Console.SetCursorPosition(1, 33);
-                                                Console.WriteLine("Press any key to try again");
-                                                Console.SetCursorPosition(1, 34);
-                                                Console.ReadKey();
-                                                blnContinue = true;
+                                                goto case 3;
                                             }
+
+                                            
                                         }
-                                        else
+
+                                    case 4:
                                         {
-                                            Console.SetCursorPosition(1, 33);
-                                            Console.WriteLine("Press any key to try again");
-                                            Console.SetCursorPosition(1, 34);
+                                            Console.Clear();
+                                           
+                                            Console.SetCursorPosition(1, 5);
+                                            Console.WriteLine("Congratulations ! you have escaped the sewers !");
+                                            Console.WriteLine("Press 1 to exit the game.");
+                                            ConsoleKeyInfo ckiCommand;                                            
                                             Console.ReadKey();
-                                            blnContinue = false;
+                                            
+                                            if(command == "1")
+                                            {
+                                            Console.SetCursorPosition(1, 6);
+                                            Console.WriteLine("hello");
+                                            Console.ReadLine();
+                                            }
+                                            else
+                                            {
+                                                goto case 4;
+                                            }
+                                               
+                                            break;                                          
                                         }
-                                    }
-                                    else
-                                    {
-                                        Console.SetCursorPosition(1, 33);
-                                        Console.WriteLine("Press any key to try again");
-                                        Console.SetCursorPosition(1, 34);
-                                        Console.ReadKey();
-                                        blnContinue = true;
-                                    }
-                                }
-                                else
-                                {
-                                    Console.SetCursorPosition(1, 33);
-                                    Console.WriteLine("Press any key to go back");
-                                    Console.SetCursorPosition(1, 34);
-                                    Console.ReadKey();
-                                }
 
-                            } while (blnContinue);
+                                }                               
 
-                            break;
-                        }
+                        }break;                  
 
 
                     case "2":
@@ -279,19 +288,29 @@ namespace EscapeRoomCodeJunkies
                             Console.SetCursorPosition(1, 19);
                             command = Console.ReadLine();
 
-                            do
-                            {
-                                if (command == "1")
-                                {      
-                                    Console.Clear();
-                                    Program.Livingroom();
-                                    Console.WriteLine("Enter the 3 digit code");
-                                    Console.SetCursorPosition(1, 16);
-                                    command = Console.ReadLine();
-                                }
-                                else { }
+                            int intQuestions2 = 1;
 
-                                    if (command == "782")
+                            switch (intQuestions2)
+                            {
+                                case 1:
+                                    {
+                                        Console.Clear();
+                                        Program.Livingroom();
+                                        Console.WriteLine("Enter the 3 digit code");
+                                        Console.SetCursorPosition(1, 16);
+                                        command = Console.ReadLine();
+
+                                        if (command == "782")
+                                        {
+                                            goto case 2;
+                                        }
+                                        else
+                                        {
+                                            goto case 1;
+                                        }
+                                    }
+
+                                case 2:
                                     {
                                         Console.Clear();
                                         Program.Livingroom();
@@ -301,27 +320,14 @@ namespace EscapeRoomCodeJunkies
                                         Console.WriteLine("In the safe you found a note with the digits 45, these will be used in the final code lock, to escape.");
                                         Console.SetCursorPosition(1, 17);
                                         Console.WriteLine("Press b to go back");
-                                        Console.SetCursorPosition(1,18);
+                                        Console.SetCursorPosition(1, 18);
                                         command = Console.ReadLine();
-                                        
-                                        
-                                        
-
+                                        break;
                                     }
-
-                                    else { }
-
-
-
-
-
-
-                            } while (command == "y"); 
-
-
-
+                            }
                             break;
                         }
+                         
 
 
                     case "3":
@@ -342,30 +348,40 @@ namespace EscapeRoomCodeJunkies
                             Console.WriteLine("b. To go back");
                             Console.SetCursorPosition(1, 20);
                             command = Console.ReadLine();
-                            
-                           
 
-                            do
+                            int intQuestions3 = 1;
+
+                            switch (intQuestions3)
                             {
-                                if (command == "1")
-                                {
-                                    Console.Clear();
-                                    Program.Mortuarium();
-                                    Console.SetCursorPosition(1, 15);
-                                    Console.WriteLine(".esuoh sih ta esuohrethguals a htiw esuoh gib a sah nam A");
-                                    Console.SetCursorPosition(1, 16);
-                                    Console.WriteLine(".gnippohs  tuo og ot tnaw ton seod nam eht dna dab si rehtaew eht yad txen ehT .stelgip lufituaeb 3 snwo nam eht");
-                                    Console.SetCursorPosition(1, 17);
-                                    Console.WriteLine(".ylimaf elohw eht htiw tae nac eh taht os sgip lufituaeb eht fo 2 rethguals ot sediced nam eht os");
-                                    Console.SetCursorPosition(1, 18);
-                                    Console.WriteLine("? tfel era stelgip ynam woH");
-                                    Console.SetCursorPosition(1, 19);
-                                    Console.WriteLine("What is the answer to this Riddle?");
-                                    Console.SetCursorPosition(1, 21);
-                                    command = Console.ReadLine(); 
+                                case 1:
+                                    {
+                                        Console.Clear();
+                                        Program.Mortuarium();
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine(".esuoh sih ta esuohrethguals a htiw esuoh gib a sah nam A");
+                                        Console.SetCursorPosition(1, 16);
+                                        Console.WriteLine(".gnippohs  tuo og ot tnaw ton seod nam eht dna dab si rehtaew eht yad txen ehT .stelgip lufituaeb 3 snwo nam eht");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine(".ylimaf elohw eht htiw tae nac eh taht os sgip lufituaeb eht fo 2 rethguals ot sediced nam eht os");
+                                        Console.SetCursorPosition(1, 18);
+                                        Console.WriteLine("? tfel era stelgip ynam woH");
+                                        Console.SetCursorPosition(1, 19);
+                                        Console.WriteLine("What is the answer to this Riddle?");
+                                        Console.SetCursorPosition(1, 21);
+                                        command = Console.ReadLine();
 
+                                        if(command == "3")
+                                        {
+                                            goto case 2;
+                                        }
+                                        else
+                                        {
+                                            goto case 1;
+                                        }
+                                        
+                                    }
 
-                                    if (command == "3")
+                                case 2:
                                     {
                                         Console.Clear();
                                         Program.Mortuarium();
@@ -375,29 +391,16 @@ namespace EscapeRoomCodeJunkies
                                         Console.WriteLine("You have opened locker number 3");
                                         Console.SetCursorPosition(1, 17);
                                         Console.WriteLine("You found a note with the numbers 782, it must be for some kind of safe.");
-                                        Console.ReadLine();
+                                        Console.SetCursorPosition(1, 18);
+                                        Console.WriteLine("b. to go back");
+                                        Console.SetCursorPosition(1, 19);
+
+                                        command = Console.ReadLine();
+                                        break;
+                                        
                                     }
+                            }
 
-                                    else  { }
-
-                                }
-                                else
-                                {
-                                    Console.Clear();
-                                    Program.Mortuarium();
-                                    Console.SetCursorPosition(1, 15);
-                                    Console.WriteLine("Do you want to try again ? (y)");
-                                    Console.SetCursorPosition(1, 16);
-                                    command = Console.ReadLine();
-                                }
-
-                            } while (command == "y");
-                            Console.Clear();
-                            Program.Mortuarium();
-                            Console.SetCursorPosition(1, 15);
-                            Console.WriteLine("Press b to go back to the hall");
-                            Console.SetCursorPosition(1, 16);
-                            command = Console.ReadLine();
                             break;
                         }
 
@@ -677,6 +680,8 @@ namespace EscapeRoomCodeJunkies
             Console.Write(strDiningroomBtxt);
             Console.SetCursorPosition(1, 15);
         }
+
+        
     }
 }
 
