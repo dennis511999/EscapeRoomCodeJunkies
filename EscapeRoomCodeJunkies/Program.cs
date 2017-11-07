@@ -161,17 +161,19 @@ namespace EscapeRoomCodeJunkies
                             Console.SetCursorPosition(1, 18);
                             command = Console.ReadLine();
 
+                            if (command == "1")
+                            {
+                                Console.Clear();
+                                Program.Dining();
+                                Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
+                                Console.SetCursorPosition(1, 16);
+                                command = Console.ReadLine();
+                            }
+                            else { }
+
                             do
                             {
-                                if (command == "1")
-                                {
-                                    Console.Clear();
-                                    Program.Dining();
-                                    Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
-                                    Console.SetCursorPosition(1, 16);
-                                    command = Console.ReadLine();
-                                }
-                                else { }
+                               
 
                                 if (command == "4505")
                                 {
