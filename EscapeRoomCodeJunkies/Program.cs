@@ -163,6 +163,7 @@ namespace EscapeRoomCodeJunkies
                             Console.WriteLine("b. To go back");
                             Console.SetCursorPosition(1, 18);
                             command = Console.ReadLine();
+                            break;
 
                             int intQuestion = 1;                          
 
