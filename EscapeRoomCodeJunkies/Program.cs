@@ -47,7 +47,7 @@ namespace EscapeRoomCodeJunkies
             for (int i = 0; i < strIntroText.Length; i++)
             {
                 Console.Write(strIntroText[i]);
-                Thread.Sleep(0);
+                Thread.Sleep(1);
             }
 
             Thread.Sleep(1000);
@@ -156,11 +156,70 @@ namespace EscapeRoomCodeJunkies
                             Console.BackgroundColor = ConsoleColor.DarkBlue;
                             Console.ForegroundColor = ConsoleColor.Black;
                             Program.Dining();
-                            Console.WriteLine("You have entered the Dining room.");
+                            Console.WriteLine("You have entered the Dining room, you see the table in front of you, it requires a 4 digit code.");
                             Console.SetCursorPosition(1, 16);
-                            Console.WriteLine("b. To go back");
+                            Console.WriteLine("1. To try the code lock ");
                             Console.SetCursorPosition(1, 17);
+                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 18);
                             command = Console.ReadLine();
+
+                            do
+                            {
+                                if (command == "1")
+                                {
+                                    Console.Clear();
+                                    Program.Dining();
+                                    Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
+                                    Console.SetCursorPosition(1, 15);
+                                    command = Console.ReadLine();
+                                }
+                                else { }
+
+                                if (command == "4505")
+                                {
+                                    Console.Clear();
+                                    
+                                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            } while (command == "y");
+
+                        
+                                
+                                
+
+
+
+
+
+
+
+
+
+
+
                             break;
                         }
 
@@ -429,7 +488,7 @@ namespace EscapeRoomCodeJunkies
                                                     Console.SetCursorPosition(1, 17);
                                                     Console.WriteLine("You have succeeded this puzzle.");
                                                     Console.SetCursorPosition(1, 18);
-                                                    Console.WriteLine("...CODE...");
+                                                    Console.WriteLine("05");
                                                     Console.SetCursorPosition(1, 19);
                                                     Console.WriteLine("b. Go back to the hall");
                                                     Console.SetCursorPosition(1, 20);
