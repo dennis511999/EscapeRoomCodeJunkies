@@ -156,11 +156,84 @@ namespace EscapeRoomCodeJunkies
                             Console.BackgroundColor = ConsoleColor.Blue;
                             Console.ForegroundColor = ConsoleColor.Black;
                             Program.Dining();
-                            Console.WriteLine("You have entered the Dining room.");
+                            Console.WriteLine("You have entered the Dining room, you see the table in front of you, it requires a 4 digit code.");
                             Console.SetCursorPosition(1, 16);
-                            Console.WriteLine("b. To go back");
+                            Console.WriteLine("1. To try the code lock ");
                             Console.SetCursorPosition(1, 17);
+                            Console.WriteLine("b. To go back");
+                            Console.SetCursorPosition(1, 18);
                             command = Console.ReadLine();
+
+                            do
+                            {
+                                if (command == "1")
+                                {
+                                    Console.Clear();
+                                    Program.Dining();
+                                    Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
+                                    Console.SetCursorPosition(1, 16);
+                                    command = Console.ReadLine();
+
+                                    if(command == "4505")
+                                    {
+                                        Console.Clear();
+                                        Program.DiningroomB();
+                                        Console.SetCursorPosition(42, 15);
+                                        Console.WriteLine("A ladder hatch has opened under the table, it might be the exit !");
+                                        Console.SetCursorPosition(42, 17);
+                                        Console.WriteLine("Press 1 to go down the ladder");
+                                        Console.SetCursorPosition(42, 18);
+                                        command = Console.ReadLine();
+
+                                        if(command == "1")
+                                        {
+                                            Console.Clear();
+                                            Program.Exit();
+                                            Console.SetCursorPosition(3, 23);
+                                            Console.WriteLine("This is the last puzzle, give the right answer and you will be a free bird.");
+                                            Console.SetCursorPosition(3, 24);
+                                            Console.WriteLine("there are seven people in my family, with five children including me.");
+                                            Console.SetCursorPosition(3, 25);
+                                            Console.WriteLine("The second eldest is four years younger than me. The second eldest girl, who I get on with really well,");
+                                            Console.SetCursorPosition(3, 26);
+                                            Console.WriteLine(" is three years younger than the eldest girl.");
+                                            Console.SetCursorPosition(3, 27);
+                                            Console.WriteLine("The eldest boy is four years younger than the eldest girl, and three years older than the youngest boy. ");
+                                            Console.SetCursorPosition(3, 28);
+                                            Console.WriteLine("We all have the same parents. If the second eldest girl is nineteen years old, how old am I?");
+                                            Console.SetCursorPosition(3, 30);
+                                            Console.WriteLine("Answer this riddle to escape the sewers !");
+                                            Console.SetCursorPosition(45, 30);
+                                            command = Console.ReadLine();
+
+                                            if(command == "19")
+                                            {
+                                                Console.Clear();
+                                                Console.SetCursorPosition(1, 5);
+                                                Console.WriteLine("Congratulations ! you have escaped the sewers !");
+                                                Console.WriteLine("Press any key to exit the game.");
+                                                Console.ReadLine();
+                                            }
+                                            else
+                                            {
+
+                                            }
+                                        }
+                                        else
+                                        {
+
+                                        }
+                                    }
+                                    else
+                                    {
+                                    }
+                                }
+                                else
+                                {
+
+                                }
+
+                            } while (command == "y");
                             break;
                         }
 
@@ -570,6 +643,14 @@ namespace EscapeRoomCodeJunkies
         static void ClearLine()
         {
             Console.Write(new string(' ', Console.BufferWidth - Console.CursorLeft ));
+        }
+
+        static void DiningroomB()
+        {
+            Console.Clear();
+            string strDiningroomBtxt = System.IO.File.ReadAllText(@"../../DiningroomB.txt");
+            Console.Write(strDiningroomBtxt);
+            Console.SetCursorPosition(1, 15);
         }
     }
 }
