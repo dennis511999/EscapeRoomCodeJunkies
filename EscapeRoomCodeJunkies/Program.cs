@@ -152,17 +152,7 @@ namespace EscapeRoomCodeJunkies
                 {
                     case "1":
                         {
-                            Console.Clear();
-                            Console.BackgroundColor = ConsoleColor.Blue;
-                            Console.ForegroundColor = ConsoleColor.Black;
-                            Program.Dining();
-                            Console.WriteLine("You have entered the Dining room, you see the table in front of you, it requires a 4 digit code.");
-                            Console.SetCursorPosition(1, 16);
-                            Console.WriteLine("1. To try the code lock ");
-                            Console.SetCursorPosition(1, 17);
-                            Console.WriteLine("b. To go back");
-                            Console.SetCursorPosition(1, 18);
-                            command = Console.ReadLine();
+                            
                             
 
                             int intQuestion = 1;                          
@@ -173,20 +163,25 @@ namespace EscapeRoomCodeJunkies
                                     case 1:
                                     {
                                         Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.Blue;
+                                        Console.ForegroundColor = ConsoleColor.Black;
                                         Program.Dining();
-                                        Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
+                                        Console.WriteLine("You have entered the Dining room, you see the table in front of you, it requires a 4 digit code.");
                                         Console.SetCursorPosition(1, 16);
-
-                                        if (Console.ReadLine() == "4505")
+                                        Console.WriteLine("1. To try the code lock ");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine("b. To go back");
+                                        Console.SetCursorPosition(1, 18);
+                                        
+                                        if(Console.ReadLine() == "1")
                                         {
-
                                             goto case 2;
-
                                         }
                                         else
                                         {
-                                            goto case 1;
+                                            break;
                                         }
+                                        
                                         
                                     }
                                         
@@ -196,7 +191,39 @@ namespace EscapeRoomCodeJunkies
 
                                     case 2:
                                         {
-                                            
+
+                                            Console.Clear();
+                                            Program.Dining();
+                                            Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
+                                            Console.SetCursorPosition(1, 16);
+                                            Console.WriteLine("b. to go back");
+                                            Console.SetCursorPosition(1, 17);
+                                            command = Console.ReadLine();
+
+
+                                            if (command == "4505")
+                                            {
+
+                                                goto case 3;
+
+                                            }
+                                            else if(command == "b") 
+                                            {
+                                                Console.SetCursorPosition(1, 18);
+                                                Console.WriteLine("Press b. ");
+                                                Console.SetCursorPosition(1, 19);
+                                                command = Console.ReadLine();
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                goto case 2;
+                                            }
+                                 
+                                        }
+
+                                    case 3:
+                                        {
                                             Console.Clear();
                                             Program.DiningroomB();
                                             Console.SetCursorPosition(42, 15);
@@ -206,17 +233,20 @@ namespace EscapeRoomCodeJunkies
                                             Console.SetCursorPosition(42, 18);
                                             if (Console.ReadLine() == "1")
                                             {
-                                                goto case 3;
+                                                goto case 4;
                                             }
                                             else
                                             {
-                                                goto case 2;
+                                                goto case 3;
                                             }
+                                            
+
                                             
                                         }
 
-                                    case 3:
+                                    case 4:
                                         {
+
                                             Console.Clear();
                                             Program.Exit();
                                             Console.SetCursorPosition(3, 23);
@@ -237,39 +267,40 @@ namespace EscapeRoomCodeJunkies
 
                                             if (Console.ReadLine() == "19")
                                             {
-                                                goto case 4;
+                                                goto case 5;
 
                                             }
                                             else
                                             {
-                                                goto case 3;
+                                                goto case 4;
                                             }
-
-                                            
+                                                                                      
                                         }
 
-                                    case 4:
+                                    case 5:
                                         {
+
                                             Console.Clear();
-                                           
+
                                             Console.SetCursorPosition(0, 5);
                                             Console.WriteLine("Congratulations ! you have escaped the sewers !");
                                             Console.WriteLine("Press 1 to exit the game.");
-                                            ConsoleKeyInfo ckiCommand;                                            
+                                            ConsoleKeyInfo ckiCommand;
                                             Console.ReadKey();
-                                            
-                                            if(command == "1")
+
+                                            if (command == "1")
                                             {
-                                            Console.SetCursorPosition(0, 8);
-                                            Console.WriteLine("hello");
-                                            Console.ReadLine();
+                                                Console.SetCursorPosition(0, 8);
+                                                Console.WriteLine("hello");
+                                                Console.ReadLine();
                                             }
                                             else
                                             {
-                                                goto case 4;
+                                                goto case 5;
                                             }
-                                               
-                                            break;                                          
+
+
+                                        break;
                                         }
                                     
 
@@ -330,6 +361,8 @@ namespace EscapeRoomCodeJunkies
                                         command = Console.ReadLine();
                                         break;
                                     }
+
+                                case 3:
                             }
                             break;
                         }
