@@ -78,7 +78,7 @@ namespace EscapeRoomCodeJunkies
             Console.SetCursorPosition(1, 18);
             Console.WriteLine("A boy named Bernard said You know that's bad luck.");
             Console.SetCursorPosition(1, 19);
-            Console.WriteLine("If you do it too much then you tongue might get stuck.");
+            Console.WriteLine("If you do it too much then your tongue might get stuck.");
             Console.SetCursorPosition(1, 20);
             Console.WriteLine("When Bernard had a birthday, the cake was in place.");
             Console.SetCursorPosition(1, 21);
@@ -117,7 +117,11 @@ namespace EscapeRoomCodeJunkies
 
                 if (command == "111155")
                 {
-                    Console.WriteLine("Good job you opened the cell.\r\nPress any key to continue.");
+                    Console.SetCursorPosition(1, 33);
+                    Console.WriteLine("Good job you opened the cell.");
+                    Console.SetCursorPosition(1, 34);
+                    Console.WriteLine("Press any key to continue");
+                    Console.SetCursorPosition(1, 35);
                     Console.ReadKey();
                     blnContinue = false;
 
@@ -184,14 +188,31 @@ namespace EscapeRoomCodeJunkies
                                         Console.SetCursorPosition(1, 17);
                                         Console.WriteLine("b. To go back");
                                         Console.SetCursorPosition(1, 18);
+                                        command = Console.ReadLine();
                                         
-                                        if(Console.ReadLine() == "1")
+                                        if(command == "1")
                                         {
                                             goto case 2;
                                         }
+                                        else if(command == "b")
+                                        {
+                                            Console.SetCursorPosition(1, 21);
+                                            Console.WriteLine("Press b to go back.");
+                                            Console.SetCursorPosition(1, 22);
+                                            command = Console.ReadLine();
+                                            if (command == "b")
+                                            {
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                goto case 1;
+                                            }
+
+                                        }
                                         else
                                         {
-                                            break;
+                                            goto case 1;
                                         }
                                         
                                         
@@ -206,6 +227,7 @@ namespace EscapeRoomCodeJunkies
 
                                             Console.Clear();
                                             Program.Dining();
+                                            Console.SetCursorPosition(1, 15);
                                             Console.WriteLine("You can now enter the 4 digit code, but it has to be in the right order.");
                                             Console.SetCursorPosition(1, 16);
                                             Console.WriteLine("b. to go back");
@@ -297,10 +319,9 @@ namespace EscapeRoomCodeJunkies
                                             Console.SetCursorPosition(0, 5);
                                             Console.WriteLine("Congratulations ! you have escaped the sewers !");
                                             Console.WriteLine("Press 1 to exit the game.");
-                                            ConsoleKeyInfo ckiCommand;
-                                            Console.ReadKey();
+                                            
 
-                                            if (command == "1")
+                                            if (Console.ReadLine() == "1")
                                             {
                                                 Console.SetCursorPosition(0, 8);
                                                 Console.WriteLine("hello");
@@ -310,6 +331,8 @@ namespace EscapeRoomCodeJunkies
                                             {
                                                 goto case 5;
                                             }
+
+
 
 
                                         break;
@@ -350,9 +373,24 @@ namespace EscapeRoomCodeJunkies
                                         {
                                             goto case 2;
                                         }
+                                        else if(command == "b")
+                                        {
+                                            Console.SetCursorPosition(1, 21);
+                                            Console.WriteLine("Press b to go back.");
+                                            Console.SetCursorPosition(1, 22);
+                                            command = Console.ReadLine();
+                                            if (command == "b")
+                                            {
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                goto case 1;
+                                            }
+                                        }
                                         else
                                         {
-                                            break;
+                                            goto case 1;
                                         }
                                     }
 
@@ -372,13 +410,23 @@ namespace EscapeRoomCodeJunkies
                                         }
                                         else if (command == "b")
                                         {
-                                            Console.WriteLine("Press b.");
+                                            Console.SetCursorPosition(1, 21);
+                                            Console.WriteLine("Press b to go back.");
+                                            Console.SetCursorPosition(1, 22);
                                             command = Console.ReadLine();
-                                            break;
+                                            if (command == "b")
+                                            {
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                goto case 1;
+                                            }
+
                                         }
                                         else
                                         {
-                                            goto case 1;
+                                            goto case 2;
                                         }
                                     }
 
@@ -434,10 +482,26 @@ namespace EscapeRoomCodeJunkies
                                         {
                                             goto case 2;
                                         }
+                                        else if(command == "b")
+                                        {
+                                            Console.SetCursorPosition(1, 21);
+                                            Console.WriteLine("Press b to go back.");
+                                            Console.SetCursorPosition(1, 22);
+                                            command = Console.ReadLine();
+                                            if (command == "b")
+                                            {
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                goto case 1;
+                                            }
+                                        }
                                         else
                                         {
-                                            break;
+                                            goto case 1;
                                         }
+
 
                                     }
 
@@ -492,39 +556,80 @@ namespace EscapeRoomCodeJunkies
                         }
 
                     case "4":
-                        {                         
-                            do
+                        {
+
+
+                            int intQuestions4 = 1;
+
+                            switch (intQuestions4)
                             {
-                                Console.ResetColor();
-                                Console.Clear();
-                                Program.Toilet();
-                                                              
-                                Console.SetCursorPosition(1, 15);
-                                Console.WriteLine("You have entered the toilet.");
-                                Console.SetCursorPosition(1, 16);
-                                Console.WriteLine("1. Search the toilets");
-                                Console.SetCursorPosition(1, 17);
-                                Console.WriteLine("b. To go back");
-                                Console.SetCursorPosition(1, 18);
-                                command = Console.ReadLine();            
-
-                                if (command == "1")
-                                {
-                                    Console.SetCursorPosition(1, 19);
-                                    Console.WriteLine("There is some tekst on the wall.");
-                                    Console.SetCursorPosition(1, 20);
-                                    Console.WriteLine("Put the colours in the right order.");
-                                    Console.SetCursorPosition(1, 21);
-                                    Console.WriteLine("Underneath it is a hidden console pannel.");
-                                    Console.SetCursorPosition(1, 22);
-                                    Console.WriteLine("Enter the colours.");
-                                    Console.SetCursorPosition(1, 23);
-                                    command = Console.ReadLine();
-
-                                    if (command == "yellow")
+                                case 1:
                                     {
                                         Console.ResetColor();
-                                        Console.Clear();                                        
+                                        Console.Clear();
+                                        Program.Toilet();
+
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("You have entered the toilet.");
+                                        Console.SetCursorPosition(1, 16);
+                                        Console.WriteLine("1. Search the toilets");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine("b. To go back");
+                                        Console.SetCursorPosition(1, 18);
+                                        command = Console.ReadLine();
+
+                                        if(command == "1")
+                                        {
+                                            goto case 2;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Press b to go back.");
+                                            command = Console.ReadLine();
+                                            break;
+                                        }
+
+                                        
+                                        
+                                    }
+                                case 2:
+                                    {
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Program.Toilet();
+
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("There is some tekst on the wall.");
+                                        Console.SetCursorPosition(1, 16);
+                                        Console.WriteLine("Put the colours in the right order.");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine("Underneath it is a hidden console panel.");
+                                        Console.SetCursorPosition(1, 18);
+                                        Console.WriteLine("Enter the colours.");
+                                        Console.SetCursorPosition(1, 19);
+                                        command = Console.ReadLine();
+
+                                        if (command == "yellow")
+                                        {
+                                            goto case 3;
+                                        }
+                                        else if (command == "b")
+                                        {
+                                            Console.WriteLine("Press b to leave the room");
+                                            command = Console.ReadLine();
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            goto case 2;
+                                        }
+                                        
+                                    
+                                    }
+                                case 3:
+                                    {
+                                        Console.ResetColor();
+                                        Console.Clear();
                                         Console.BackgroundColor = ConsoleColor.DarkYellow;
                                         Console.ForegroundColor = ConsoleColor.Black;
                                         Program.Toilet();
@@ -533,146 +638,140 @@ namespace EscapeRoomCodeJunkies
                                         Console.SetCursorPosition(1, 16);
                                         command = Console.ReadLine();
 
-                                        if(command == "blue")
+                                        if (command == "blue")
                                         {
-                                            Console.ResetColor();
-                                            Console.Clear();                                            
-                                            Console.BackgroundColor = ConsoleColor.DarkBlue;
-                                            Console.ForegroundColor = ConsoleColor.Black;
-                                            Program.Toilet();
-                                            Console.SetCursorPosition(1, 15);
-                                            Console.WriteLine("Enter next colour.");
-                                            Console.SetCursorPosition(1, 16);
-                                            command = Console.ReadLine();
-
-
-                                            if (command == "green")
-                                            {
-
-                                                Console.ResetColor();
-                                                Console.Clear();
-                                                Console.BackgroundColor = ConsoleColor.DarkGreen;
-                                                Console.ForegroundColor = ConsoleColor.Black;
-                                                Program.Toilet();
-                                                Console.SetCursorPosition(1, 15);
-                                                Console.WriteLine("Enter next colour.");
-                                                Console.SetCursorPosition(1, 16);
-                                                command = Console.ReadLine();
-
-                                                if (command == "red")
-                                                {
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkRed;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.Yellow;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkBlue;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkGreen;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkRed;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.Yellow;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkBlue;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkGreen;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Console.BackgroundColor = ConsoleColor.DarkRed;
-                                                    Program.Toilet();
-                                                    Thread.Sleep(120);
-
-                                                    Console.ResetColor();
-                                                    Console.Clear();
-                                                    Program.Toilet();
-                                                    Console.SetCursorPosition(1, 15);
-                                                    Console.WriteLine("The mirror went open.");
-                                                    Console.SetCursorPosition(1, 16);
-                                                    Console.WriteLine("In it is a note.");
-                                                    Console.SetCursorPosition(1, 17);
-                                                    Console.WriteLine("You have succeeded this puzzle.");
-                                                    Console.SetCursorPosition(1, 18);
-                                                    Console.WriteLine("...CODE...");
-                                                    Console.SetCursorPosition(1, 19);
-                                                    Console.WriteLine("b. Go back to the hall");
-                                                    Console.SetCursorPosition(1, 20);
-                                                    command = Console.ReadLine();
-                                                }
-                                                else
-                                                {
-                                                    Console.SetCursorPosition(1, 24);
-                                                    Console.WriteLine("retry (y)");
-                                                    Console.SetCursorPosition(1, 25);
-                                                    command = Console.ReadLine();
-                                                    Console.Clear();
-                                                }
-
-                                               
-
-                                            }
-                                            else
-                                            {
-                                                Console.SetCursorPosition(1, 24);
-                                                Console.WriteLine("retry (y)");
-                                                Console.SetCursorPosition(1, 25);
-                                                command = Console.ReadLine();
-                                                Console.Clear();
-                                            }  
+                                            goto case 4;
                                         }
                                         else
                                         {
-                                            Console.SetCursorPosition(1, 24);
-                                            Console.WriteLine("retry (y)");
-                                            Console.SetCursorPosition(1, 25);
-                                            command = Console.ReadLine();
-                                            Console.Clear();
+                                            goto case 2;
+                                        }
+                                    }
+                                case 4:
+                                    {
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Program.Toilet();
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("Enter next colour.");
+                                        Console.SetCursorPosition(1, 16);
+                                        command = Console.ReadLine();
+                                        
+                                        if(command == "green")
+                                        {
+                                            goto case 5;
+                                        }
+                                        else
+                                        {
+                                            goto case 2;
+                                        }
+                                               
+                                    }
+                                case 5:
+                                    {
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkGreen;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Program.Toilet();
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("Enter next colour.");
+                                        Console.SetCursorPosition(1, 16);
+                                        command = Console.ReadLine();
+
+                                        if (command == "red")
+                                        {
+                                            goto case 6;
+                                        }
+                                        else
+                                        {
+                                            goto case 2;
+                                        }
+                                    }
+                                case 6:
+                                    {
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.Yellow;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkGreen;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.Yellow;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkGreen;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                                        Program.Toilet();
+                                        Thread.Sleep(120);
+
+                                        goto case 7;
+
+                                    }
+                                case 7:
+                                    {
+                                        Console.ResetColor();
+                                        Console.Clear();
+                                        Program.Toilet();
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("The mirror went open.");
+                                        Console.SetCursorPosition(1, 16);
+                                        Console.WriteLine("In it is a note.");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine("You have succeeded this puzzle.");
+                                        Console.SetCursorPosition(1, 18);
+                                        Console.WriteLine("The code is 05.");
+                                        Console.SetCursorPosition(1, 19);
+                                        Console.WriteLine("b. Go back to the hall.");
+                                        Console.SetCursorPosition(1, 20);
+                                        command = Console.ReadLine();
+                                        if (command == "b")
+                                        {
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            goto case 7;
                                         }
                                         
                                     }
-                                    else
-                                    {
-                                        Console.SetCursorPosition(1, 24);
-                                        Console.WriteLine("retry (y)");
-                                        Console.SetCursorPosition(1, 25);
-                                        command = Console.ReadLine();
-                                        Console.Clear();
-                                    }                         
-                                }
-                                else
-                                {
-                                    
-                                   
-                                }
-
-                            } while (command == "y");
-
-                            break;
-
+                                
+                            }
+                            
+                          break;
                         }
                         
 
