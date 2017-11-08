@@ -19,8 +19,7 @@ namespace EscapeRoomCodeJunkies
         static void Main(string[] args)
         {
             string command;
-          
-
+      
             //Start menu
 
             Console.WindowHeight = 45;
@@ -42,7 +41,6 @@ namespace EscapeRoomCodeJunkies
             "Find your way out of my sewers, if you can that is. \n" +
             "I will give you a hint. \n" +
             "Start by finding the code to open your cell door. \n";
-
 
 
             for (int i = 0; i < strIntroText.Length; i++)
@@ -86,7 +84,6 @@ namespace EscapeRoomCodeJunkies
             Console.SetCursorPosition(1, 29);
             Console.WriteLine("Try to open the lock.");
 
-
             bool blnContinue = true;
 
             do
@@ -127,14 +124,11 @@ namespace EscapeRoomCodeJunkies
                 }
               
             } while (blnContinue);
-
-
-            
+ 
             //Halls and switches for other rooms
             
             do
             {
-
                 Console.ResetColor();
 
                 Console.Clear();
@@ -203,14 +197,8 @@ namespace EscapeRoomCodeJunkies
                                         else
                                         {
                                             goto case 1;
-                                        }
-                                        
-                                        
-                                    }
-                                        
-
-                                                                                                                      
-                                        
+                                        }                               
+                                    }                                     
 
                                     case 2:
                                         {
@@ -264,9 +252,7 @@ namespace EscapeRoomCodeJunkies
                                             {
                                                 goto case 3;
                                             }
-                                            
-
-                                            
+                                  
                                         }
 
                                     case 4:
@@ -329,375 +315,483 @@ namespace EscapeRoomCodeJunkies
                                                 Console.Clear();
                                                 string strEscapeCar4 = System.IO.File.ReadAllText(@"../../EscapeCar4.txt");
                                                 Console.Write(strEscapeCar4);
-                                                Thread.Sleep(90);
+                                                Thread.Sleep(100);
                                                 Console.Clear();
                                                 string strEscapeCar5 = System.IO.File.ReadAllText(@"../../EscapeCar5.txt");
                                                 Console.Write(strEscapeCar5);
-                                                Thread.Sleep(90);
+                                                Thread.Sleep(100);
                                                 Console.Clear();
                                                 string strEscapeCar6 = System.IO.File.ReadAllText(@"../../EscapeCar6.txt");
                                                 Console.Write(strEscapeCar6);
-                                                Thread.Sleep(90);
+                                                Thread.Sleep(100);
                                                 Console.Clear();
                                                 string strEscapeCar7 = System.IO.File.ReadAllText(@"../../EscapeCar7.txt");
                                                 Console.Write(strEscapeCar7);
-                                                Thread.Sleep(90);
+                                                Thread.Sleep(100);
                                                 Console.Clear();
                                                 string strEscapeCar8 = System.IO.File.ReadAllText(@"../../EscapeCar8.txt");
                                                 Console.Write(strEscapeCar8);
-                                                Thread.Sleep(85);
+                                                Thread.Sleep(95);
                                                 Console.Clear();
                                                 string strEscapeCar9 = System.IO.File.ReadAllText(@"../../EscapeCar9.txt");
                                                 Console.Write(strEscapeCar9);
-                                                Thread.Sleep(85);
+                                                Thread.Sleep(95);
                                                 Console.Clear();
                                                 string strEscapeCar10 = System.IO.File.ReadAllText(@"../../EscapeCar10.txt");
                                                 Console.Write(strEscapeCar10);
-                                                Thread.Sleep(85);
+                                                Thread.Sleep(95);
                                                 Console.Clear();
                                                 string strEscapeCar11 = System.IO.File.ReadAllText(@"../../EscapeCar11.txt");
                                                 Console.Write(strEscapeCar11);
-                                                Thread.Sleep(80);
+                                                Thread.Sleep(95);
                                                 Console.Clear();
                                                 string strEscapeCar12 = System.IO.File.ReadAllText(@"../../EscapeCar12.txt");
                                                 Console.Write(strEscapeCar12);
-                                                Thread.Sleep(80);
+                                                Thread.Sleep(95);
                                                 Console.Clear();
                                                 string strEscapeCar13 = System.IO.File.ReadAllText(@"../../EscapeCar13.txt");
                                                 Console.Write(strEscapeCar13);
-                                                Thread.Sleep(80);
+                                                Thread.Sleep(95);
                                                 Console.Clear();
                                                 string strEscapeCar14 = System.IO.File.ReadAllText(@"../../EscapeCar14.txt");
                                                 Console.Write(strEscapeCar14);
-                                                Thread.Sleep(75);
+                                                Thread.Sleep(95);
                                                 Console.Clear();
                                                 string strEscapeCar15 = System.IO.File.ReadAllText(@"../../EscapeCar15.txt");
                                                 Console.Write(strEscapeCar15);
-                                                Thread.Sleep(75);
+                                                Thread.Sleep(90);
                                                 Console.Clear();
                                                 string strEscapeCar16 = System.IO.File.ReadAllText(@"../../EscapeCar16.txt");
                                                 Console.Write(strEscapeCar16);
-                                                Thread.Sleep(75);
+                                                Thread.Sleep(90);
                                                 Console.Clear();
                                                 string strEscapeCar17 = System.IO.File.ReadAllText(@"../../EscapeCar17.txt");
                                                 Console.Write(strEscapeCar17);
-                                                Thread.Sleep(70);
+                                                Thread.Sleep(90);
                                                 Console.Clear();
                                                 string strEscapeCar18 = System.IO.File.ReadAllText(@"../../EscapeCar18.txt");
                                                 Console.Write(strEscapeCar18);
-                                                Thread.Sleep(70);
+                                                Thread.Sleep(90);
                                                 Console.Clear();
                                                 string strEscapeCar19 = System.IO.File.ReadAllText(@"../../EscapeCar19.txt");
                                                 Console.Write(strEscapeCar19);
-                                                Thread.Sleep(70);
+                                                Thread.Sleep(90);
                                                 Console.Clear();
                                                 string strEscapeCar20 = System.IO.File.ReadAllText(@"../../EscapeCar20.txt");
                                                 Console.Write(strEscapeCar20);
-                                                Thread.Sleep(65);
+                                                Thread.Sleep(90);
                                                 Console.Clear();
                                                 string strEscapeCar21 = System.IO.File.ReadAllText(@"../../EscapeCar21.txt");
                                                 Console.Write(strEscapeCar21);
-                                                Thread.Sleep(65);
+                                                Thread.Sleep(90);
                                                 Console.Clear();
                                                 string strEscapeCar22 = System.IO.File.ReadAllText(@"../../EscapeCar22.txt");
                                                 Console.Write(strEscapeCar22);
-                                                Thread.Sleep(65);
+                                                Thread.Sleep(85);
                                                 Console.Clear();
                                                 string strEscapeCar23 = System.IO.File.ReadAllText(@"../../EscapeCar23.txt");
                                                 Console.Write(strEscapeCar23);
-                                                Thread.Sleep(60);
+                                                Thread.Sleep(85);
                                                 Console.Clear();
                                                 string strEscapeCar24 = System.IO.File.ReadAllText(@"../../EscapeCar24.txt");
                                                 Console.Write(strEscapeCar24);
-                                                Thread.Sleep(60);
+                                                Thread.Sleep(85);
                                                 Console.Clear();
                                                 string strEscapeCar25 = System.IO.File.ReadAllText(@"../../EscapeCar25.txt");
                                                 Console.Write(strEscapeCar25);
-                                                Thread.Sleep(60);
+                                                Thread.Sleep(85);
                                                 Console.Clear();
                                                 string strEscapeCar26 = System.IO.File.ReadAllText(@"../../EscapeCar26.txt");
                                                 Console.Write(strEscapeCar26);
-                                                Thread.Sleep(55);
+                                                Thread.Sleep(85);
                                                 Console.Clear();
                                                 string strEscapeCar27 = System.IO.File.ReadAllText(@"../../EscapeCar27.txt");
                                                 Console.Write(strEscapeCar27);
-                                                Thread.Sleep(55);
+                                                Thread.Sleep(85);
                                                 Console.Clear();
                                                 string strEscapeCar28 = System.IO.File.ReadAllText(@"../../EscapeCar28.txt");
                                                 Console.Write(strEscapeCar28);
-                                                Thread.Sleep(55);
+                                                Thread.Sleep(85);
                                                 Console.Clear();
                                                 string strEscapeCar29 = System.IO.File.ReadAllText(@"../../EscapeCar29.txt");
                                                 Console.Write(strEscapeCar29);
-                                                Thread.Sleep(50);
+                                                Thread.Sleep(80);
                                                 Console.Clear();
                                                 string strEscapeCar30 = System.IO.File.ReadAllText(@"../../EscapeCar30.txt");
                                                 Console.Write(strEscapeCar30);
-                                                Thread.Sleep(50);
+                                                Thread.Sleep(80);
                                                 Console.Clear();
                                                 string strEscapeCar31 = System.IO.File.ReadAllText(@"../../EscapeCar31.txt");
                                                 Console.Write(strEscapeCar31);
-                                                Thread.Sleep(50);
+                                                Thread.Sleep(80);
                                                 Console.Clear();
                                                 string strEscapeCar32 = System.IO.File.ReadAllText(@"../../EscapeCar32.txt");
                                                 Console.Write(strEscapeCar32);
-                                                Thread.Sleep(45);
+                                                Thread.Sleep(80);
                                                 Console.Clear();
                                                 string strEscapeCar33 = System.IO.File.ReadAllText(@"../../EscapeCar33.txt");
                                                 Console.Write(strEscapeCar33);
-                                                Thread.Sleep(45);
+                                                Thread.Sleep(80);
                                                 Console.Clear();
                                                 string strEscapeCar34 = System.IO.File.ReadAllText(@"../../EscapeCar34.txt");
                                                 Console.Write(strEscapeCar34);
-                                                Thread.Sleep(45);
+                                                Thread.Sleep(80);
                                                 Console.Clear();
                                                 string strEscapeCar35 = System.IO.File.ReadAllText(@"../../EscapeCar35.txt");
                                                 Console.Write(strEscapeCar35);
-                                                Thread.Sleep(40);
+                                                Thread.Sleep(80);
                                                 Console.Clear();
                                                 string strEscapeCar36 = System.IO.File.ReadAllText(@"../../EscapeCar36.txt");
                                                 Console.Write(strEscapeCar36);
-                                                Thread.Sleep(40);
+                                                Thread.Sleep(75);
                                                 Console.Clear();
                                                 string strEscapeCar37 = System.IO.File.ReadAllText(@"../../EscapeCar37.txt");
                                                 Console.Write(strEscapeCar37);
-                                                Thread.Sleep(40);
+                                                Thread.Sleep(75);
                                                 Console.Clear();
                                                 string strEscapeCar38 = System.IO.File.ReadAllText(@"../../EscapeCar38.txt");
                                                 Console.Write(strEscapeCar38);
-                                                Thread.Sleep(35);
+                                                Thread.Sleep(75);
                                                 Console.Clear();
                                                 string strEscapeCar39 = System.IO.File.ReadAllText(@"../../EscapeCar39.txt");
                                                 Console.Write(strEscapeCar39);
-                                                Thread.Sleep(35);
+                                                Thread.Sleep(75);
                                                 Console.Clear();
                                                 string strEscapeCar40 = System.IO.File.ReadAllText(@"../../EscapeCar40.txt");
                                                 Console.Write(strEscapeCar40);
-                                                Thread.Sleep(35);
+                                                Thread.Sleep(75);
                                                 Console.Clear();
                                                 string strEscapeCar41 = System.IO.File.ReadAllText(@"../../EscapeCar41.txt");
                                                 Console.Write(strEscapeCar41);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(75);
                                                 Console.Clear();
                                                 string strEscapeCar42 = System.IO.File.ReadAllText(@"../../EscapeCar42.txt");
                                                 Console.Write(strEscapeCar42);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(75);
                                                 Console.Clear();
                                                 string strEscapeCar43 = System.IO.File.ReadAllText(@"../../EscapeCar43.txt");
                                                 Console.Write(strEscapeCar43);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(70);
                                                 Console.Clear();
                                                 string strEscapeCar44 = System.IO.File.ReadAllText(@"../../EscapeCar44.txt");
                                                 Console.Write(strEscapeCar44);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(70);
                                                 Console.Clear();
                                                 string strEscapeCar45 = System.IO.File.ReadAllText(@"../../EscapeCar45.txt");
                                                 Console.Write(strEscapeCar45);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(70);
                                                 Console.Clear();
                                                 string strEscapeCar46 = System.IO.File.ReadAllText(@"../../EscapeCar46.txt");
                                                 Console.Write(strEscapeCar46);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(70);
                                                 Console.Clear();
                                                 string strEscapeCar47 = System.IO.File.ReadAllText(@"../../EscapeCar47.txt");
                                                 Console.Write(strEscapeCar47);
-                                                Thread.Sleep(35);
+                                                Thread.Sleep(70);
                                                 Console.Clear();
                                                 string strEscapeCar48 = System.IO.File.ReadAllText(@"../../EscapeCar48.txt");
                                                 Console.Write(strEscapeCar48);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(70);
                                                 Console.Clear();
                                                 string strEscapeCar49 = System.IO.File.ReadAllText(@"../../EscapeCar49.txt");
                                                 Console.Write(strEscapeCar49);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(70);
                                                 Console.Clear();
                                                 string strEscapeCar50 = System.IO.File.ReadAllText(@"../../EscapeCar50.txt");
                                                 Console.Write(strEscapeCar50);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(65);
                                                 Console.Clear();
                                                 string strEscapeCar51 = System.IO.File.ReadAllText(@"../../EscapeCar51.txt");
                                                 Console.Write(strEscapeCar51);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(65);
                                                 Console.Clear();
                                                 string strEscapeCar52 = System.IO.File.ReadAllText(@"../../EscapeCar52.txt");
                                                 Console.Write(strEscapeCar52);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(65);
                                                 Console.Clear();
                                                 string strEscapeCar53 = System.IO.File.ReadAllText(@"../../EscapeCar53.txt");
                                                 Console.Write(strEscapeCar53);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(65);
                                                 Console.Clear();
                                                 string strEscapeCar54 = System.IO.File.ReadAllText(@"../../EscapeCar54.txt");
                                                 Console.Write(strEscapeCar54);
-                                                Thread.Sleep(35);
+                                                Thread.Sleep(65);
                                                 Console.Clear();
                                                 string strEscapeCar55 = System.IO.File.ReadAllText(@"../../EscapeCar55.txt");
                                                 Console.Write(strEscapeCar55);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(65);
                                                 Console.Clear();
                                                 string strEscapeCar56 = System.IO.File.ReadAllText(@"../../EscapeCar56.txt");
                                                 Console.Write(strEscapeCar56);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(65);
                                                 Console.Clear();
                                                 string strEscapeCar57 = System.IO.File.ReadAllText(@"../../EscapeCar57.txt");
                                                 Console.Write(strEscapeCar57);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(60);
                                                 Console.Clear();
                                                 string strEscapeCar58 = System.IO.File.ReadAllText(@"../../EscapeCar58.txt");
                                                 Console.Write(strEscapeCar58);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(60);
                                                 Console.Clear();
                                                 string strEscapeCar59 = System.IO.File.ReadAllText(@"../../EscapeCar59.txt");
                                                 Console.Write(strEscapeCar59);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(60);
                                                 Console.Clear();
                                                 string strEscapeCar60 = System.IO.File.ReadAllText(@"../../EscapeCar60.txt");
                                                 Console.Write(strEscapeCar60);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(60);
                                                 Console.Clear();
                                                 string strEscapeCar61 = System.IO.File.ReadAllText(@"../../EscapeCar61.txt");
                                                 Console.Write(strEscapeCar61);
-                                                Thread.Sleep(35);
+                                                Thread.Sleep(60);
                                                 Console.Clear();
                                                 string strEscapeCar62 = System.IO.File.ReadAllText(@"../../EscapeCar62.txt");
                                                 Console.Write(strEscapeCar62);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(60);
                                                 Console.Clear();
                                                 string strEscapeCar63 = System.IO.File.ReadAllText(@"../../EscapeCar63.txt");
                                                 Console.Write(strEscapeCar63);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(60);
                                                 Console.Clear();
                                                 string strEscapeCar64 = System.IO.File.ReadAllText(@"../../EscapeCar64.txt");
                                                 Console.Write(strEscapeCar64);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(55);
                                                 Console.Clear();
                                                 string strEscapeCar65 = System.IO.File.ReadAllText(@"../../EscapeCar65.txt");
                                                 Console.Write(strEscapeCar65);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(55);
                                                 Console.Clear();
                                                 string strEscapeCar66 = System.IO.File.ReadAllText(@"../../EscapeCar66.txt");
                                                 Console.Write(strEscapeCar66);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(55);
                                                 Console.Clear();
                                                 string strEscapeCar67 = System.IO.File.ReadAllText(@"../../EscapeCar67.txt");
                                                 Console.Write(strEscapeCar67);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(55);
                                                 Console.Clear();
                                                 string strEscapeCar68 = System.IO.File.ReadAllText(@"../../EscapeCar68.txt");
                                                 Console.Write(strEscapeCar68);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(55);
                                                 Console.Clear();
                                                 string strEscapeCar69 = System.IO.File.ReadAllText(@"../../EscapeCar69.txt");
                                                 Console.Write(strEscapeCar69);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(55);
                                                 Console.Clear();
                                                 string strEscapeCar70 = System.IO.File.ReadAllText(@"../../EscapeCar70.txt");
                                                 Console.Write(strEscapeCar70);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(55);
                                                 Console.Clear();
                                                 string strEscapeCar71 = System.IO.File.ReadAllText(@"../../EscapeCar71.txt");
                                                 Console.Write(strEscapeCar71);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(50);
                                                 Console.Clear();
                                                 string strEscapeCar72 = System.IO.File.ReadAllText(@"../../EscapeCar72.txt");
                                                 Console.Write(strEscapeCar72);
-                                                Thread.Sleep(35);
+                                                Thread.Sleep(50);
                                                 Console.Clear();
                                                 string strEscapeCar73 = System.IO.File.ReadAllText(@"../../EscapeCar73.txt");
                                                 Console.Write(strEscapeCar73);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(50);
                                                 Console.Clear();
                                                 string strEscapeCar74 = System.IO.File.ReadAllText(@"../../EscapeCar74.txt");
                                                 Console.Write(strEscapeCar74);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(50);
                                                 Console.Clear();
                                                 string strEscapeCar75 = System.IO.File.ReadAllText(@"../../EscapeCar75.txt");
                                                 Console.Write(strEscapeCar75);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(50);
                                                 Console.Clear();
                                                 string strEscapeCar76 = System.IO.File.ReadAllText(@"../../EscapeCar76.txt");
                                                 Console.Write(strEscapeCar76);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(50);
                                                 Console.Clear();
                                                 string strEscapeCar77 = System.IO.File.ReadAllText(@"../../EscapeCar77.txt");
                                                 Console.Write(strEscapeCar77);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(50);
                                                 Console.Clear();
                                                 string strEscapeCar78 = System.IO.File.ReadAllText(@"../../EscapeCar78.txt");
                                                 Console.Write(strEscapeCar78);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(45);
                                                 Console.Clear();
                                                 string strEscapeCar79 = System.IO.File.ReadAllText(@"../../EscapeCar79.txt");
                                                 Console.Write(strEscapeCar79);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(45);
                                                 Console.Clear();
                                                 string strEscapeCar80 = System.IO.File.ReadAllText(@"../../EscapeCar80.txt");
                                                 Console.Write(strEscapeCar80);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(45);
                                                 Console.Clear();
                                                 string strEscapeCar81 = System.IO.File.ReadAllText(@"../../EscapeCar81.txt");
                                                 Console.Write(strEscapeCar81);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(45);
                                                 Console.Clear();
                                                 string strEscapeCar82 = System.IO.File.ReadAllText(@"../../EscapeCar82.txt");
                                                 Console.Write(strEscapeCar82);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(45);
                                                 Console.Clear();
                                                 string strEscapeCar83 = System.IO.File.ReadAllText(@"../../EscapeCar83.txt");
                                                 Console.Write(strEscapeCar83);
-                                                Thread.Sleep(35);
+                                                Thread.Sleep(45);
                                                 Console.Clear();
                                                 string strEscapeCar84 = System.IO.File.ReadAllText(@"../../EscapeCar84.txt");
                                                 Console.Write(strEscapeCar84);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(45);
                                                 Console.Clear();
                                                 string strEscapeCar85 = System.IO.File.ReadAllText(@"../../EscapeCar85.txt");
                                                 Console.Write(strEscapeCar85);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(40);
                                                 Console.Clear();
                                                 string strEscapeCar86 = System.IO.File.ReadAllText(@"../../EscapeCar86.txt");
                                                 Console.Write(strEscapeCar86);
-                                                Thread.Sleep(30);
+                                                Thread.Sleep(40);
                                                 Console.Clear();
                                                 string strEscapeCar87 = System.IO.File.ReadAllText(@"../../EscapeCar87.txt");
                                                 Console.Write(strEscapeCar87);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(40);
                                                 Console.Clear();
                                                 string strEscapeCar88 = System.IO.File.ReadAllText(@"../../EscapeCar88.txt");
                                                 Console.Write(strEscapeCar88);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(40);
                                                 Console.Clear();
                                                 string strEscapeCar89 = System.IO.File.ReadAllText(@"../../EscapeCar89.txt");
                                                 Console.Write(strEscapeCar89);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(40);
                                                 Console.Clear();
                                                 string strEscapeCar90 = System.IO.File.ReadAllText(@"../../EscapeCar90.txt");
                                                 Console.Write(strEscapeCar90);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(40);
                                                 Console.Clear();
                                                 string strEscapeCar91 = System.IO.File.ReadAllText(@"../../EscapeCar91.txt");
                                                 Console.Write(strEscapeCar91);
-                                                Thread.Sleep(20);
+                                                Thread.Sleep(40);
                                                 Console.Clear();
                                                 string strEscapeCar92 = System.IO.File.ReadAllText(@"../../EscapeCar92.txt");
                                                 Console.Write(strEscapeCar92);
+                                                Thread.Sleep(35);
+                                                Console.Clear();
+                                                string strEscapeCar93 = System.IO.File.ReadAllText(@"../../EscapeCar93.txt");
+                                                Console.Write(strEscapeCar93);
+                                                Thread.Sleep(35);
+                                                Console.Clear();
+                                                string strEscapeCar94 = System.IO.File.ReadAllText(@"../../EscapeCar94.txt");
+                                                Console.Write(strEscapeCar94);
+                                                Thread.Sleep(35);
+                                                Console.Clear();
+                                                string strEscapeCar95 = System.IO.File.ReadAllText(@"../../EscapeCar95.txt");
+                                                Console.Write(strEscapeCar95);
+                                                Thread.Sleep(35);
+                                                Console.Clear();
+                                                string strEscapeCar96 = System.IO.File.ReadAllText(@"../../EscapeCar96.txt");
+                                                Console.Write(strEscapeCar96);
+                                                Thread.Sleep(35);
+                                                Console.Clear();
+                                                string strEscapeCar97 = System.IO.File.ReadAllText(@"../../EscapeCar97.txt");
+                                                Console.Write(strEscapeCar97);
+                                                Thread.Sleep(35);
+                                                Console.Clear();
+                                                string strEscapeCar98 = System.IO.File.ReadAllText(@"../../EscapeCar98.txt");
+                                                Console.Write(strEscapeCar98);
+                                                Thread.Sleep(35);
+                                                Console.Clear();
+                                                string strEscapeCar99 = System.IO.File.ReadAllText(@"../../EscapeCar99.txt");
+                                                Console.Write(strEscapeCar99);
+                                                Thread.Sleep(30);
+                                                Console.Clear();
+                                                string strEscapeCar100 = System.IO.File.ReadAllText(@"../../EscapeCar100.txt");
+                                                Console.Write(strEscapeCar100);
+                                                Thread.Sleep(30);
+                                                Console.Clear();
+                                                string strEscapeCar101 = System.IO.File.ReadAllText(@"../../EscapeCar101.txt");
+                                                Console.Write(strEscapeCar101);
+                                                Thread.Sleep(30);
+                                                Console.Clear();
+                                                string strEscapeCar102 = System.IO.File.ReadAllText(@"../../EscapeCar102.txt");
+                                                Console.Write(strEscapeCar102);
+                                                Thread.Sleep(30);
+                                                Console.Clear();
+                                                string strEscapeCar103 = System.IO.File.ReadAllText(@"../../EscapeCar103.txt");
+                                                Console.Write(strEscapeCar103);
+                                                Thread.Sleep(30);
+                                                Console.Clear();
+                                                string strEscapeCar104 = System.IO.File.ReadAllText(@"../../EscapeCar104.txt");
+                                                Console.Write(strEscapeCar104);
+                                                Thread.Sleep(30);
+                                                Console.Clear();
+                                                string strEscapeCar105 = System.IO.File.ReadAllText(@"../../EscapeCar105.txt");
+                                                Console.Write(strEscapeCar105);
+                                                Thread.Sleep(30);
+                                                Console.Clear();
+                                                string strEscapeCar106 = System.IO.File.ReadAllText(@"../../EscapeCar106.txt");
+                                                Console.Write(strEscapeCar106);
+                                                Thread.Sleep(25);
+                                                Console.Clear();
+                                                string strEscapeCar107 = System.IO.File.ReadAllText(@"../../EscapeCar107.txt");
+                                                Console.Write(strEscapeCar107);
+                                                Thread.Sleep(25);
+                                                Console.Clear();
+                                                string strEscapeCar108 = System.IO.File.ReadAllText(@"../../EscapeCar108.txt");
+                                                Console.Write(strEscapeCar108);
+                                                Thread.Sleep(25);
+                                                Console.Clear();
+                                                string strEscapeCar109 = System.IO.File.ReadAllText(@"../../EscapeCar109.txt");
+                                                Console.Write(strEscapeCar109);
+                                                Thread.Sleep(25);
+                                                Console.Clear();
+                                                string strEscapeCar110 = System.IO.File.ReadAllText(@"../../EscapeCar110.txt");
+                                                Console.Write(strEscapeCar110);
+                                                Thread.Sleep(25);
+                                                Console.Clear();
+                                                string strEscapeCar111 = System.IO.File.ReadAllText(@"../../EscapeCar111.txt");
+                                                Console.Write(strEscapeCar111);
+                                                Thread.Sleep(25);
+                                                Console.Clear();
+                                                string strEscapeCar112 = System.IO.File.ReadAllText(@"../../EscapeCar112.txt");
+                                                Console.Write(strEscapeCar112);
+                                                Thread.Sleep(25);
+                                                Console.Clear();
+                                                string strEscapeCar113 = System.IO.File.ReadAllText(@"../../EscapeCar113.txt");
+                                                Console.Write(strEscapeCar113);
                                                 Thread.Sleep(20);
                                                 Console.Clear();
-
-
-
-
-
-
-
-                                            string strEnding = System.IO.File.ReadAllText(@"../../Ending.txt");
-                                                Console.Write(strEnding);
-                                                Thread.Sleep(10);
-                                                Console.ReadLine();
-
-
-
-                                            Console.ReadLine();
+                                                string strEscapeCar114 = System.IO.File.ReadAllText(@"../../EscapeCar114.txt");
+                                                Console.Write(strEscapeCar114);
+                                                Thread.Sleep(20);
+                                                Console.Clear();
+                                                string strEscapeCar115 = System.IO.File.ReadAllText(@"../../EscapeCar115.txt");
+                                                Console.Write(strEscapeCar115);
+                                                Thread.Sleep(20);
+                                                Console.Clear();
+                                                string strEscapeCar116 = System.IO.File.ReadAllText(@"../../EscapeCar116.txt");
+                                                Console.Write(strEscapeCar116);
+                                                Thread.Sleep(20);
+                                                Console.Clear();
+                                                string strEscapeCar117 = System.IO.File.ReadAllText(@"../../EscapeCar117.txt");
+                                                Console.Write(strEscapeCar117);
+                                                Thread.Sleep(20);
+                                                Console.Clear();
+                                                string strEscapeCar118 = System.IO.File.ReadAllText(@"../../EscapeCar118.txt");
+                                                Console.Write(strEscapeCar118);
+                                                Thread.Sleep(20);
+                                                Console.Clear();
+                                                string strEscapeCar119 = System.IO.File.ReadAllText(@"../../EscapeCar119.txt");
+                                                Console.Write(strEscapeCar119);
+                                                Thread.Sleep(20);
+                                                Console.Clear();
+                                                string strEscapeCar120 = System.IO.File.ReadAllText(@"../../EscapeCar120.txt");
+                                                Console.Write(strEscapeCar120);
+                                                Thread.Sleep(15);
+                                                Console.Clear();
+                                                string strEscapeCar121 = System.IO.File.ReadAllText(@"../../EscapeCar121.txt");
+                                                Console.Write(strEscapeCar121);
+                                                Thread.Sleep(15);
+                                                Console.Clear();
+                                                string strEscapeCar122 = System.IO.File.ReadAllText(@"../../EscapeCar122.txt");
+                                                Console.Write(strEscapeCar122);
+                                                Thread.Sleep(15);
+                                                Console.Clear();
+                                                string strEscapeCar123 = System.IO.File.ReadAllText(@"../../EscapeCar123.txt");
+                                                Console.Write(strEscapeCar123);
+                                                Console.ReadLine();           
                                             }
                                             else
                                             {
