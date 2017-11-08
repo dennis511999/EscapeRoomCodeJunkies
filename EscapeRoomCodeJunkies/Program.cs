@@ -288,6 +288,8 @@ namespace EscapeRoomCodeJunkies
                                             Console.WriteLine("We all have the same parents. If the second eldest girl is nineteen years old, how old am I?");
                                             Console.SetCursorPosition(3, 30);
                                             Console.WriteLine("Answer this riddle to escape the sewers !");
+                                            Console.SetCursorPosition(3, 31);
+                                            Console.WriteLine("The hint: there is a twin.");
                                             Console.SetCursorPosition(45, 30);
 
                                             if (Console.ReadLine() == "19")
