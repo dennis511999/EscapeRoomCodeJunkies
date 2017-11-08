@@ -46,10 +46,10 @@ namespace EscapeRoomCodeJunkies
             for (int i = 0; i < strIntroText.Length; i++)
             {
                 Console.Write(strIntroText[i]);
-                Thread.Sleep(0);
+                Thread.Sleep(75);
             }
 
-            Thread.Sleep(0);
+            Thread.Sleep(1000);
 
             Console.Clear();
 
@@ -77,12 +77,13 @@ namespace EscapeRoomCodeJunkies
             Console.WriteLine("a = 1, z = 26");
             Console.SetCursorPosition(1, 26);
             Console.WriteLine("Use 1 letter every sentence.");
-            Console.SetCursorPosition(1, 26);
-            Console.WriteLine("You looked at the lock.");
             Console.SetCursorPosition(1, 27);
+            Console.WriteLine("You looked at the lock.");
+            Console.SetCursorPosition(1, 28);
             Console.WriteLine("Its need a six digit number to unlock.");
             Console.SetCursorPosition(1, 29);
             Console.WriteLine("Try to open the lock.");
+            Console.SetCursorPosition(1, 30);
 
             bool blnContinue = true;
 
@@ -104,11 +105,11 @@ namespace EscapeRoomCodeJunkies
 
                 if (command == "111155")
                 {
-                    Console.SetCursorPosition(1, 33);
-                    Console.WriteLine("Good job you opened the cell.");
                     Console.SetCursorPosition(1, 34);
-                    Console.WriteLine("Press any key to continue");
+                    Console.WriteLine("Good job you opened the cell.");
                     Console.SetCursorPosition(1, 35);
+                    Console.WriteLine("Press any key to continue");
+                    Console.SetCursorPosition(1, 36);
                     Console.ReadKey();
                     blnContinue = false;
 
@@ -1009,7 +1010,15 @@ namespace EscapeRoomCodeJunkies
                                         Console.SetCursorPosition(1, 19);
 
                                         command = Console.ReadLine();
-                                        break;
+                                        if(command == "b")
+                                        {
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            goto case 3;
+                                        }
+                                        
                                     }
                             }
 
