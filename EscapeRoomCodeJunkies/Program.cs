@@ -311,20 +311,10 @@ namespace EscapeRoomCodeJunkies
 
                     case "2":
                         {
-                            Console.Clear();
-                            Console.BackgroundColor = ConsoleColor.DarkGreen;
-                            Console.ForegroundColor = ConsoleColor.Black;
-                            Program.Livingroom();
-                            Console.WriteLine("You have entered the Living room.");
-                            Console.SetCursorPosition(1, 15);
-                            Console.WriteLine("You can open the Safe in this room, it requires a 3 digit code which you can get in another room.");
-                            Console.SetCursorPosition(1, 17);
-                            Console.WriteLine("1. To try the code lock");
-                            Console.SetCursorPosition(1, 18);
-                            Console.WriteLine("b. To go back");
-                            Console.SetCursorPosition(1, 19);
-                            command = Console.ReadLine();
+                            
+                            
 
+                          
                             int intQuestions2 = 1;
 
                             switch (intQuestions2)
@@ -332,14 +322,47 @@ namespace EscapeRoomCodeJunkies
                                 case 1:
                                     {
                                         Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkGreen;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Program.Livingroom();
+                                        Console.WriteLine("You have entered the Living room.");
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("You can open the Safe in this room, it requires a 3 digit code which you can get in another room.");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine("1. To try the code lock");
+                                        Console.SetCursorPosition(1, 18);
+                                        Console.WriteLine("b. To go back");
+                                        Console.SetCursorPosition(1, 19);
+                                        command = Console.ReadLine();
+                                        if(command == "1")
+                                        {
+                                            goto case 2;
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+                                    }
+
+                                case 2:
+                                    {
+                                        Console.Clear();
                                         Program.Livingroom();
                                         Console.WriteLine("Enter the 3 digit code");
                                         Console.SetCursorPosition(1, 16);
+                                        Console.WriteLine("Press b to go back.");
+                                        Console.SetCursorPosition(1, 17);
                                         command = Console.ReadLine();
 
                                         if (command == "782")
                                         {
                                             goto case 2;
+                                        }
+                                        else if (command == "b")
+                                        {
+                                            Console.WriteLine("Press b.");
+                                            command = Console.ReadLine();
+                                            break;
                                         }
                                         else
                                         {
@@ -347,7 +370,7 @@ namespace EscapeRoomCodeJunkies
                                         }
                                     }
 
-                                case 2:
+                                case 3:
                                     {
                                         Console.Clear();
                                         Program.Livingroom();
@@ -362,7 +385,7 @@ namespace EscapeRoomCodeJunkies
                                         break;
                                     }
 
-                                case 3:
+                                    
                             }
                             break;
                         }
@@ -371,22 +394,7 @@ namespace EscapeRoomCodeJunkies
 
                     case "3":
                         {
-                            Console.Clear();
-                            Console.BackgroundColor = ConsoleColor.DarkRed;
-                            Console.ForegroundColor = ConsoleColor.Black;
-                            Program.Mortuarium();
-                            Console.SetCursorPosition(1, 15);
-                            Console.WriteLine("You have entered the Mortuarium.");
-                            Console.SetCursorPosition(1, 16);
-                            Console.WriteLine("Answer this riddle to know which drawer you have to open. If you open the wrong one the room wil explode");
-                            Console.SetCursorPosition(1, 17);
-                            Console.WriteLine("You found a note on the table, press 1 to open the note");
-                            Console.SetCursorPosition(1, 18);
-                            Console.WriteLine("1. Open the note");
-                            Console.SetCursorPosition(1, 19);
-                            Console.WriteLine("b. To go back");
-                            Console.SetCursorPosition(1, 20);
-                            command = Console.ReadLine();
+                            
 
                             int intQuestions3 = 1;
 
@@ -394,6 +402,36 @@ namespace EscapeRoomCodeJunkies
                             {
                                 case 1:
                                     {
+                                        Console.Clear();
+                                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Program.Mortuarium();
+                                        Console.SetCursorPosition(1, 15);
+                                        Console.WriteLine("You have entered the Mortuarium.");
+                                        Console.SetCursorPosition(1, 16);
+                                        Console.WriteLine("Answer this riddle to know which drawer you have to open. If you open the wrong one the room wil explode");
+                                        Console.SetCursorPosition(1, 17);
+                                        Console.WriteLine("You found a note on the table, press 1 to open the note");
+                                        Console.SetCursorPosition(1, 18);
+                                        Console.WriteLine("1. Open the note");
+                                        Console.SetCursorPosition(1, 19);
+                                        Console.WriteLine("b. To go back");
+                                        Console.SetCursorPosition(1, 20);
+                                        command = Console.ReadLine();
+                                        if(command == "1")
+                                        {
+                                            goto case 2;
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+
+                                    }
+
+                                case 2:
+                                    {
+
                                         Console.Clear();
                                         Program.Mortuarium();
                                         Console.SetCursorPosition(1, 15);
@@ -409,18 +447,17 @@ namespace EscapeRoomCodeJunkies
                                         Console.SetCursorPosition(1, 21);
                                         command = Console.ReadLine();
 
-                                        if(command == "3")
+                                        if (command == "3")
                                         {
-                                            goto case 2;
+                                            goto case 3;
                                         }
                                         else
                                         {
-                                            goto case 1;
+                                            goto case 2;
                                         }
-                                        
                                     }
 
-                                case 2:
+                                case 3:
                                     {
                                         Console.Clear();
                                         Program.Mortuarium();
@@ -436,7 +473,6 @@ namespace EscapeRoomCodeJunkies
 
                                         command = Console.ReadLine();
                                         break;
-                                        
                                     }
                             }
 
