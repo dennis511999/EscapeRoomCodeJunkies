@@ -78,6 +78,8 @@ namespace EscapeRoomCodeJunkies
             Console.SetCursorPosition(1, 25);
             Console.WriteLine("a = 1, z = 26");
             Console.SetCursorPosition(1, 26);
+            Console.WriteLine("Use 1 letter every sentence.");
+            Console.SetCursorPosition(1, 26);
             Console.WriteLine("You looked at the lock.");
             Console.SetCursorPosition(1, 27);
             Console.WriteLine("Its need a six digit number to unlock.");
@@ -246,6 +248,7 @@ namespace EscapeRoomCodeJunkies
 
                                     case 3:
                                         {
+                                            Console.ResetColor();
                                             Console.Clear();
                                             Program.DiningroomB();
                                             Console.SetCursorPosition(42, 15);
@@ -290,7 +293,6 @@ namespace EscapeRoomCodeJunkies
                                             if (Console.ReadLine() == "19")
                                             {
                                                 goto case 5;
-
                                             }
                                             else
                                             {
@@ -312,7 +314,9 @@ namespace EscapeRoomCodeJunkies
                                             if (Console.ReadLine() == "1")
                                             {
                                                 Console.SetCursorPosition(0, 8);
-                                                Console.WriteLine("hello");
+                                                Program.RaceCar();
+                                                Thread.Sleep(3000);
+                                                Console.SetCursorPosition(20, 8);
                                                 Console.ReadLine();
                                             }
                                             else
@@ -320,15 +324,10 @@ namespace EscapeRoomCodeJunkies
                                                 goto case 5;
                                             }
 
-
-
-
                                         break;
                                         }
-                                    
-
-                                }                               
-
+            
+                                }                              
                         }break;                  
 
 
@@ -394,7 +393,7 @@ namespace EscapeRoomCodeJunkies
 
                                         if (command == "782")
                                         {
-                                            goto case 2;
+                                            goto case 3;
                                         }
                                         else if (command == "b")
                                         {
@@ -566,19 +565,32 @@ namespace EscapeRoomCodeJunkies
                                         Console.SetCursorPosition(1, 18);
                                         command = Console.ReadLine();
 
-                                        if(command == "1")
+                                        if (command == "1")
                                         {
                                             goto case 2;
                                         }
+                                        else if (command == "b")
+                                        {
+                                            Console.SetCursorPosition(1, 21);
+                                            Console.WriteLine("Press b to go back.");
+                                            Console.SetCursorPosition(1, 22);
+                                            command = Console.ReadLine();
+                                            if (command == "b")
+                                            {
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                goto case 1;
+                                            }
+                                        }
                                         else
                                         {
-                                            Console.WriteLine("Press b to go back.");
-                                            command = Console.ReadLine();
-                                            break;
+                                            goto case 1;
                                         }
 
-                                        
-                                        
+
+
                                     }
                                 case 2:
                                     {
@@ -756,19 +768,39 @@ namespace EscapeRoomCodeJunkies
                                         }
                                         
                                     }
-                                
+                                                 
                             }
-                            
-                          break;
+
+                            break;
                         }
 
+                    default:
+                    {
+                            
+                            Console.SetCursorPosition(1, 21);
+                            Console.WriteLine("Wrong input, Try again.");
+                            Console.SetCursorPosition(1, 22);
+                            Console.WriteLine("Press b to go back");
+                            
+                            Console.SetCursorPosition(1, 23);
+                            command = Console.ReadLine();
+                            if(command == "b")
+                            {
+                                Console.SetCursorPosition(1, 24);
+                                Console.WriteLine("Press b again");
+                                Console.SetCursorPosition(1, 25);
+                                break;
+                            }
+                            else
+                            {
+                                goto default;
+                            }
+        
+                    }
                 }
-                
+               
             } while (command == "b");
 
-
-
-            
             command = Console.ReadLine();
 
             do
@@ -792,8 +824,6 @@ namespace EscapeRoomCodeJunkies
             }
             while (command == "Y");
 
-
-
         }
 
         static void Dining()
@@ -801,9 +831,7 @@ namespace EscapeRoomCodeJunkies
             Console.Clear();
             string strDiningRoomTxt = System.IO.File.ReadAllText(@"../../DiningroomA.txt");
             Console.Write(strDiningRoomTxt);
-            Console.SetCursorPosition(1, 15);
-            
-            
+            Console.SetCursorPosition(1, 15);     
         }
 
         static void Livingroom()
@@ -811,8 +839,7 @@ namespace EscapeRoomCodeJunkies
             Console.Clear();
             string strLivingRoomTxt = System.IO.File.ReadAllText(@"../../LivingRoom.txt");
             Console.Write(strLivingRoomTxt);
-            Console.SetCursorPosition(1, 15);
-            
+            Console.SetCursorPosition(1, 15);            
         }
 
         static void Mortuarium()
@@ -820,8 +847,7 @@ namespace EscapeRoomCodeJunkies
             Console.Clear();
             string strMortuariumTxt = System.IO.File.ReadAllText(@"../../Mortuarium.txt");
             Console.Write(strMortuariumTxt);
-            Console.SetCursorPosition(1, 15);
-            
+            Console.SetCursorPosition(1, 15);            
         }
 
         static void Toilet()
@@ -829,8 +855,7 @@ namespace EscapeRoomCodeJunkies
             Console.Clear();
             string strToiletTxt = System.IO.File.ReadAllText(@"../../Toilet.txt");
             Console.Write(strToiletTxt);
-            Console.SetCursorPosition(1, 15);
-            
+            Console.SetCursorPosition(1, 15);            
         }
         
         static void Exit()
@@ -853,6 +878,14 @@ namespace EscapeRoomCodeJunkies
             string strDiningroomBtxt = System.IO.File.ReadAllText(@"../../DiningroomB.txt");
             Console.Write(strDiningroomBtxt);
             Console.SetCursorPosition(1, 15);
+        }
+
+        static void RaceCar()
+        {
+            Console.Clear();
+            string strEscapeCar = System.IO.File.ReadAllText(@"../../EscapeCar.txt");
+            Console.Write(strEscapeCar);
+            
         }
 
         
