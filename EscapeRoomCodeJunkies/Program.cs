@@ -13,8 +13,10 @@ namespace EscapeRoomCodeJunkies
     class Program
     {
         
-        public static bool Escape { get; private set; }
-
+      
+        public static ThreadStart TS = new ThreadStart(FunctionTimer);
+        public static Thread TimerThread = new Thread(TS);
+        public static int intTimer =36000;
 
         static void Main(string[] args)
         {
@@ -51,9 +53,19 @@ namespace EscapeRoomCodeJunkies
                 Thread.Sleep(0);
             }
 
-            Thread.Sleep(0);
+            Thread.Sleep(4800);
 
             Console.Clear();
+
+
+           
+            TimerThread.Start();
+
+
+
+
+
+
 
             //First puzzle in the basement
 
@@ -662,6 +674,8 @@ namespace EscapeRoomCodeJunkies
                             break;
 
                         }
+                        
+
 
                 }
                 
@@ -672,40 +686,37 @@ namespace EscapeRoomCodeJunkies
             
             command = Console.ReadLine();
 
-            do
-            {
-                if (Escape == true)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Congratulations! You Made it out! ");
-                    Console.WriteLine("Press any key to exit ");
-                    Console.ReadLine();
-
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine("You didn't make it out in time, want to try again? (Y/N) ");
-
-                }
-
-
-            }
-            while (command == "Y");
+          
 
 
 
         }
 
-        static void Dining()
+        public static void FunctionTimer()
         {
+            do
+            { 
+               
+                intTimer--;
+                Thread.Sleep(1000);
+            }
+            while (intTimer > 0);
+            Console.Clear(); Console.WriteLine(intTimer);
+            Console.WriteLine("time's up! \r\npress any key to continue");
+            Console.ReadKey();
+            
+        }
+        
+
+          static void Dining()
+          {
             Console.Clear();
             string strDiningRoomTxt = System.IO.File.ReadAllText(@"../../DiningroomA.txt");
             Console.Write(strDiningRoomTxt);
             Console.SetCursorPosition(1, 15);
             
-            
-        }
+             
+          }
 
         static void Livingroom()
         {
