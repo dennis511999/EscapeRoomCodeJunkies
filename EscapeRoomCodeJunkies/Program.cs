@@ -46,10 +46,10 @@ namespace EscapeRoomCodeJunkies
             for (int i = 0; i < strIntroText.Length; i++)
             {
                 Console.Write(strIntroText[i]);
-                Thread.Sleep(75);
+                Thread.Sleep(0);
             }
 
-            Thread.Sleep(1000);
+            Thread.Sleep(0);
 
             Console.Clear();
 
@@ -181,18 +181,7 @@ namespace EscapeRoomCodeJunkies
                                         }
                                         else if(command == "b")
                                         {
-                                            Console.SetCursorPosition(1, 21);
-                                            Console.WriteLine("Press b to go back.");
-                                            Console.SetCursorPosition(1, 22);
-                                            command = Console.ReadLine();
-                                            if (command == "b")
-                                            {
-                                                break;
-                                            }
-                                            else
-                                            {
-                                                goto case 1;
-                                            }
+                                            break;
 
                                         }
                                         else
@@ -222,10 +211,7 @@ namespace EscapeRoomCodeJunkies
                                             }
                                             else if(command == "b") 
                                             {
-                                                Console.SetCursorPosition(1, 18);
-                                                Console.WriteLine("Press b. ");
-                                                Console.SetCursorPosition(1, 19);
-                                                command = Console.ReadLine();
+                                                
                                                 break;
                                             }
                                             else
@@ -837,18 +823,7 @@ namespace EscapeRoomCodeJunkies
                                         }
                                         else if(command == "b")
                                         {
-                                            Console.SetCursorPosition(1, 21);
-                                            Console.WriteLine("Press b to go back.");
-                                            Console.SetCursorPosition(1, 22);
-                                            command = Console.ReadLine();
-                                            if (command == "b")
-                                            {
-                                                break;
-                                            }
-                                            else
-                                            {
-                                                goto case 1;
-                                            }
+                                            break;
                                         }
                                         else
                                         {
@@ -872,18 +847,7 @@ namespace EscapeRoomCodeJunkies
                                         }
                                         else if (command == "b")
                                         {
-                                            Console.SetCursorPosition(1, 21);
-                                            Console.WriteLine("Press b to go back.");
-                                            Console.SetCursorPosition(1, 22);
-                                            command = Console.ReadLine();
-                                            if (command == "b")
-                                            {
-                                                break;
-                                            }
-                                            else
-                                            {
-                                                goto case 1;
-                                            }
+                                            break;
 
                                         }
                                         else
@@ -903,8 +867,18 @@ namespace EscapeRoomCodeJunkies
                                         Console.SetCursorPosition(1, 17);
                                         Console.WriteLine("Press b to go back");
                                         Console.SetCursorPosition(1, 18);
+                                        
+
                                         command = Console.ReadLine();
-                                        break;
+                                        if (command == "b")
+                                        {
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            goto case 3;
+                                        }
+
                                     }
 
                                     
@@ -946,18 +920,7 @@ namespace EscapeRoomCodeJunkies
                                         }
                                         else if(command == "b")
                                         {
-                                            Console.SetCursorPosition(1, 21);
-                                            Console.WriteLine("Press b to go back.");
-                                            Console.SetCursorPosition(1, 22);
-                                            command = Console.ReadLine();
-                                            if (command == "b")
-                                            {
-                                                break;
-                                            }
-                                            else
-                                            {
-                                                goto case 1;
-                                            }
+                                            break;
                                         }
                                         else
                                         {
@@ -1054,18 +1017,7 @@ namespace EscapeRoomCodeJunkies
                                         }
                                         else if (command == "b")
                                         {
-                                            Console.SetCursorPosition(1, 21);
-                                            Console.WriteLine("Press b to go back.");
-                                            Console.SetCursorPosition(1, 22);
-                                            command = Console.ReadLine();
-                                            if (command == "b")
-                                            {
-                                                break;
-                                            }
-                                            else
-                                            {
-                                                goto case 1;
-                                            }
+                                            break;
                                         }
                                         else
                                         {
@@ -1098,8 +1050,6 @@ namespace EscapeRoomCodeJunkies
                                         }
                                         else if (command == "b")
                                         {
-                                            Console.WriteLine("Press b to leave the room");
-                                            command = Console.ReadLine();
                                             break;
                                         }
                                         else
@@ -1270,9 +1220,7 @@ namespace EscapeRoomCodeJunkies
                             command = Console.ReadLine();
                             if(command == "b")
                             {
-                                Console.SetCursorPosition(1, 24);
-                                Console.WriteLine("Press b again");
-                                Console.SetCursorPosition(1, 25);
+                                
                                 break;
                             }
                             else
