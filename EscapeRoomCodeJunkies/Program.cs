@@ -46,10 +46,10 @@ namespace EscapeRoomCodeJunkies
             for (int i = 0; i < strIntroText.Length; i++)
             {
                 Console.Write(strIntroText[i]);
-                Thread.Sleep(0);
+                Thread.Sleep(85);
             }
 
-            Thread.Sleep(0);
+            Thread.Sleep(10000);
 
             Console.Clear();
 
@@ -1233,28 +1233,7 @@ namespace EscapeRoomCodeJunkies
                
             } while (command == "b");
 
-            command = Console.ReadLine();
-
-            do
-            {
-                if (Escape == true)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Congratulations! You Made it out! ");
-                    Console.WriteLine("Press any key to exit ");
-                    Console.ReadLine();
-
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine("You didn't make it out in time, want to try again? (Y/N) ");
-
-                }
-
-
-            }
-            while (command == "Y");
+           
 
         }
 
