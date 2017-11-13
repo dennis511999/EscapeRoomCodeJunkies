@@ -35,6 +35,7 @@ namespace EscapeRoomCodeJunkies
             "It’s the year 1888. \n" +
             "It's 2:00 am when you left the pub.\n" +
             "You walk through a dark alley when suddenly you got hit from behind on your head.\n" +
+            "\n" +
             "You slowly regained conciousness.\n" +
             "Where am I? \n" +
             "Old man: you have been captured by me. \n" +
